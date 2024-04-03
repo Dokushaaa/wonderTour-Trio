@@ -1,25 +1,25 @@
 //base for typographical sizes of the divs, sections, body. i.e. line-height, liding.
 @use '../abstract/' as *;
 @font-face{
-    font-family: "Clash-Display-Regular";
-    src: url('../../fonts/ClashDisplay-Regular.woff');
+    font-family: "fl-bigmug-line";
+    src: url('../../fonts/fl-bigmug-line.woff');
 }
 @font-face {
-    font-family: "Noto-Sans";
-    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet');
+    font-family: "fontawesome-webfont";
+    src: url('../../fonts/fontawesome-webfont.woff2');
 }
 @font-face{
-    font-family: "Clash-Display-Medium";
-    src: url('../../fonts/ClashDisplay-Medium.woff');
+    font-family: "JTUSjIg1_i6t8kCHKm459Wlhyw";
+    src: url('../../fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2');
 }
 @font-face{
-    font-family: "Clash-Display-Bold";
-    src: url('../../fonts/ClashDisplay-Bold.woff');
+    font-family: "fonts/MaterialIcons-Regular";
+    src: url('../../fonts/fonts/MaterialIcons-Regular.woff2');
 }
 
 
 body{
-    font-family:  "Clash-Display-Regular";
+    font-family:  "JTUSjIg1_i6t8kCHKm459Wlhyw";
     background-color: $clr-dark;
     // background-color:red;
     color:rgba($clr-dark, 0.7);
@@ -53,8 +53,7 @@ p{
     color: $clr-light;
 }
 h1,h2,h3,h4,h5,h6{
-    font-weight:bold ;
-    font-family: "Clash-Display-Bold";
+    font-family: "JTUSjIg1_i6t8kCHKm459Wlhyw";
     text-wrap: balance;
     color: $clr-light;
 }
@@ -80,26 +79,19 @@ ul{
     list-style: none;
     li{
         color: $clr-light;
-        font-family: "Clash-Display-Medium";
+        font-family: "JTUSjIg1_i6t8kCHKm459Wlhyw";
     i{
-        font-family: "Clash-Display-Regular";
+        font-family: "JTUSjIg1_i6t8kCHKm459Wlhyw";
     }
 }
 }
-img{
-    filter: brightness(100%);
-    &:hover{
-        filter: brightness(90%);
-        transform: scale(1.025); 
-       
-    }
-}
+
 button{
     color: $clr-light;
 }
 label, input ,textarea, i{
     color:$clr-dark;
-    font-family:"Clash-Display-Regular" ;
+    font-family:"JTUSjIg1_i6t8kCHKm459Wlhyw" ;
 }
 small{
     color: $clr-light;

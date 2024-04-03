@@ -31,14 +31,14 @@ $colors:(
     secondary: #303033,
     secondaryalt: #515156,
     accent: #f8565d,
-    yellow: #efa83e
+    yellow: #efa83e,
 
 );
 //color classes assigner ex: class="container bg-yellow"
 @each $key, $val in $colors{
     .bg-#{$key}{
         background-color: #{$val};
-    }
+    };
     .text-#{$key}{
         color: #{$val};
     }

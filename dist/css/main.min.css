@@ -8,32 +8,32 @@
 }
 
 @font-face {
-  font-family: "Clash-Display-Regular";
-  src: url("../../fonts/ClashDisplay-Regular.woff");
+  font-family: "fl-bigmug-line";
+  src: url("../../fonts/fl-bigmug-line.woff");
 }
 @font-face {
-  font-family: "Noto-Sans";
-  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet');
+  font-family: "fontawesome-webfont";
+  src: url("../../fonts/fontawesome-webfont.woff2");
 }
 @font-face {
-  font-family: "Clash-Display-Medium";
-  src: url("../../fonts/ClashDisplay-Medium.woff");
+  font-family: "JTUSjIg1_i6t8kCHKm459Wlhyw";
+  src: url("../../fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2");
 }
 @font-face {
-  font-family: "Clash-Display-Bold";
-  src: url("../../fonts/ClashDisplay-Bold.woff");
+  font-family: "fonts/MaterialIcons-Regular";
+  src: url("../../fonts/fonts/MaterialIcons-Regular.woff2");
 }
 body {
-  font-family: "Clash-Display-Regular";
-  background-color: var(--dark);
-  color: rgba(var(--dark), 0.7);
+  font-family: "JTUSjIg1_i6t8kCHKm459Wlhyw";
+  background-color: #000;
+  color: rgba(0, 0, 0, 0.7);
   line-height: 1.6;
   font-size: 1.6rem;
   cursor: crosshair;
 }
 
 .container {
-  max-width: 100rem;
+  max-width: 98rem;
   padding: 0 1.6rem;
   margin: 0 auto;
 }
@@ -48,21 +48,20 @@ html {
 
 a {
   text-decoration: none;
-  color: var(--light);
+  color: #fff;
 }
 
 p {
   font-size: clamp(1.4rem, 6vw, 1.6rem);
   margin-bottom: 1.15rem;
   text-wrap: balance;
-  color: var(--light);
+  color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-  font-family: "Clash-Display-Bold";
+  font-family: "JTUSjIg1_i6t8kCHKm459Wlhyw";
   text-wrap: balance;
-  color: var(--light);
+  color: #fff;
 }
 
 h1 {
@@ -90,36 +89,28 @@ ul {
   list-style: none;
 }
 ul li {
-  color: var(--light);
-  font-family: "Clash-Display-Medium";
+  color: #fff;
+  font-family: "JTUSjIg1_i6t8kCHKm459Wlhyw";
 }
 ul li i {
-  font-family: "Clash-Display-Regular";
-}
-
-img {
-  filter: brightness(100%);
-}
-img:hover {
-  filter: brightness(90%);
-  transform: scale(1.025);
+  font-family: "JTUSjIg1_i6t8kCHKm459Wlhyw";
 }
 
 button {
-  color: var(--light);
+  color: #fff;
 }
 
 label, input, textarea, i {
-  color: var(--dark);
-  font-family: "Clash-Display-Regular";
+  color: #000;
+  font-family: "JTUSjIg1_i6t8kCHKm459Wlhyw";
 }
 
 small {
-  color: var(--light);
+  color: #fff;
 }
 
 i {
-  color: var(--light);
+  color: #fff;
 }
 
 * {
@@ -3463,29 +3454,34 @@ body {
 }
 
 .btn {
-  background: var(--dark);
+  background: #fff;
   padding: 1.5rem, 2.5rem;
   margin: 2rem 0;
-  font-weight: bold;
-  border-radius: 1rem;
   display: flex;
   transition: 0.5s ease;
-  font-family: Speedee-Bold;
+  color: black;
+  outline: #000 1px;
+  width: 15rem;
+  height: 5rem;
+  border-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .btn:hover {
-  background: #cccccc;
+  background: #01b3a7;
 }
 .btn-primary {
-  background: var(--light);
+  background: #fff;
 }
 .btn .btnColor-light {
-  background-color: var(--light);
+  background-color: #fff;
 }
 .btn .btnColor-dark {
-  background-color: var(--dark);
+  background-color: #000;
+}
+.btn .btnColor-accent {
+  background-color: #01b3a7;
 }
 
 .block__header {
@@ -3494,8 +3490,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid var(--dark);
-  border-bottom: 1px solid var(--dark);
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 .block__header h2 {
   margin-bottom: 0;
@@ -3529,7 +3525,7 @@ body {
 }
 
 .header {
-  background-color: var(--dark);
+  background-color: #000;
 }
 @media (min-width: 42.5rem) {
   .header .header__wrapper {
@@ -3561,7 +3557,7 @@ body {
 }
 
 .footer {
-  background-color: var(--dark);
+  background-color: #000;
 }
 .footer__wrapper {
   padding: 5rem 2rem;
@@ -3576,7 +3572,7 @@ body {
   gap: 2rem;
 }
 .footer__wrapper .social__links .social__links__btns li i {
-  color: var(--accent);
+  color: #01b3a7;
   font-size: 2.5rem;
 }
 .footer__wrapper .footer__contacts .contacts__lists {
@@ -3596,166 +3592,191 @@ body {
   }
 }
 
-.home {
-  background-color: var(--dark);
-  width: 100%;
-}
-.home__wrapper {
+/* Breadcrumbs */
+.breadcrumbs__wrapper {
+  position: relative;
   overflow: hidden;
+  padding: 40px 0;
+  text-align: center;
+  background-color: #cccccc;
+  z-index: 1;
 }
-@media (min-width: 42.5rem) {
-  .home__wrapper {
-    overflow: unset;
-  }
+.breadcrumbs__wrapper h2 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif, Arial, sans-serif;
+  letter-spacing: normal;
+  color: #fff;
+}
+.breadcrumbs__wrapper ul {
+  margin-top: 14px;
+  margin-left: -15px;
+  margin-right: -15px;
+  font-size: 14px;
+  line-height: 1.33;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif, Arial, sans-serif;
+}
+.breadcrumbs__wrapper li {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.breadcrumbs__wrapper a {
+  color: #ffffff;
+  display: inline;
+  vertical-align: middle;
+  transition: all 0.3s ease-in-out;
+}
+.breadcrumbs__wrapper li:nth-child(1)::after {
+  content: "/";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  color: white;
+  transform: translate3d(0, -50%, 0);
+}
+.breadcrumbs__wrapper li.active {
+  color: rgba(255, 255, 255, 0.53);
+}
+.breadcrumbs__wrapper .box-position {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(100% + 150px);
+  height: calc(100% + 150px);
+  will-change: transform;
+  animation: bgPos 100s linear infinite;
+  transform: translate3d(-75px, -75px, 0) rotate(0.001deg);
+  background-position: 50% 50%;
+  background-size: cover;
+  z-index: -1;
+}
+.breadcrumbs__wrapper::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  background: rgba(43, 49, 59, 0.025);
+}
+.breadcrumbs .container {
+  position: relative;
 }
 
-.about .about__wrapper {
-  background-color: var(--secondary);
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 1rem;
+/* Tours */
+.tours__wrapper {
+  background-color: white;
 }
-@media (min-width: 42.5rem) {
-  .about .about__wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
-  }
-  .about .about__wrapper .about__controller {
-    width: 40rem;
-  }
+.tours__tab {
+  box-sizing: border-box;
+  padding: 4rem 0.5rem;
 }
-.about .about__wrapper .about__controller .about__controller__card {
-  filter: brightness(100%);
-  transition: 0.5s ease;
-  padding: 5rem 0;
+.tours__item .tours__image {
+  position: relative;
 }
-.about .about__wrapper .about__controller .about__controller__card:hover {
-  transform: scale(1.01);
-  filter: brightness(75%);
-  background-color: var(--secondaryalt);
+.tours__item .tours__image img {
+  max-width: 37.2rem;
+  margin: 0 auto;
 }
-.about .about__wrapper .about__controller .about__controller__card:hover i {
-  color: var(--accent);
+.tours__item .tours__image .tours__price {
+  position: absolute;
+  overflow: hidden;
+  text-align: center;
+  padding: 0.5rem 0.8rem;
+  top: 0;
+  right: 0;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  color: #cccccc;
+  text-transform: uppercase;
+  background: transparent;
+  z-index: 1;
 }
-.about .about__wrapper .about__controller .about__controller__card h2 {
-  border-bottom: 2px solid var(--secondaryalt);
-  padding: 2.5rem 0;
+.tours__item .tours__image .tours__price::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 14px;
+  width: 400%;
+  height: 100%;
+  background: #01b3a7;
+  transform: skew(45deg);
+  transform-origin: 50% 100%;
+  will-change: transform;
+  pointer-events: none;
+  z-index: -1;
 }
-.about .about__wrapper .about__controller .about__controller__card i {
-  font-size: 7.5rem;
-  padding-bottom: 2.5rem;
+.tours__item .tours__image .tours__price span {
+  font-size: 1.6rem;
+  letter-spacing: 0.025em;
+  color: #ffffff;
+  display: block;
 }
-.about .about__wrapper .about__controller .about__controller__card p {
+.tours__item .tours__details {
+  margin: 2rem auto;
+  position: relative;
+}
+.tours__item .tours__details h5 {
+  color: black;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+.tours__item .tours__details h5:hover {
+  color: #01b3a7;
+}
+.tours__item .tours__details .tours__ratings i {
+  color: #ffcc00;
+  font-size: 1rem;
+}
+.tours__item .tours__details p {
+  color: gray;
+  font-size: 1.2rem;
+  font-weight: 200;
+  font-weight: 300;
+}
+.tours__nav ul {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.tours__nav ul li h2 {
+  color: black;
+  padding: 2px 5px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.17);
+  width: 3rem;
+  text-align: center;
   font-size: 1.5rem;
+  font-weight: 300;
 }
-.about .about__wrapper .about__controller .about__controller__card button {
-  box-sizing: none;
-  background-color: var(--accent);
-  height: 5rem;
-  width: 10rem;
+.tours__nav ul li i {
+  color: black;
+  padding: 4px 5px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.17);
+  width: 3rem;
+  text-align: center;
   font-size: 2rem;
 }
 
-.services__wrapper .services__title h2 {
-  border-bottom: 1px solid var(--light);
-  padding: 2.5rem 0;
-}
-
-.blog {
-  background-color: #FCF9F1;
-}
-.blog__wrapper .blog__grid__manager {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 1rem;
-  padding: 2rem;
-}
-@media (min-width: 42.5rem) {
-  .blog__wrapper .blog__grid__manager {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
-  }
-}
-.blog__wrapper .blog__grid__manager .blog__what h3, .blog__wrapper .blog__grid__manager .blog__what p:first-of-type {
-  border-bottom: 1px solid var(--dark);
-  padding: 2.5rem 0;
-  color: var(--dark);
-}
-.blog__wrapper .blog__grid__manager .blog__what p {
-  color: var(--dark);
-}
-.blog__wrapper .blog__grid__manager .blog__why h3, .blog__wrapper .blog__grid__manager .blog__why p {
-  border-bottom: 1px solid var(--dark);
-  padding: 2.5rem 0;
-  color: var(--dark);
-}
-.blog__wrapper .blog__grid__manager .blog__why p:nth-of-type(2) {
-  color: var(--accent);
-}
-.blog__wrapper .blog__grid__manager .blog__why p:last-of-type {
-  border: none;
-}
-
-.appointment {
-  background-color: #343438;
-  padding: 10rem 5rem;
-}
-.appointment__wrapper .appointment__content h1 {
-  text-align: left;
-  word-spacing: 0.75rem;
-  word-break: 2;
-}
-.appointment__wrapper .appointment__content .appointment__btns {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.appointment__wrapper .appointment__content .appointment__btns button {
-  border: 1px solid var(--accent);
-  color: var(--light);
-  background-color: var(--accent);
-  height: 5rem;
-  width: 20rem;
-  font-weight: 800;
-  padding-right: 1rem;
-}
-.appointment__wrapper .appointment__content .appointment__btns i {
-  padding-left: 1rem;
-  top: 5rem;
-  font-size: 4rem;
-}
-@media (min-width: 42.5rem) {
-  .appointment {
-    padding: 4rem;
-  }
-  .appointment .appointment__wrapper .appointment__content h1 {
-    text-align: center;
-    font-size: 8rem;
-  }
-  .appointment .appointment__wrapper .appointment__content .appointment__btns {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .appointment .appointment__wrapper .appointment__content .appointment__btns button {
-    border: 1px solid var(--accent);
-    color: var(--light);
-    background-color: var(--accent);
-    height: 8rem;
-    width: 40rem;
-    font-weight: 800;
-    padding-right: 1rem;
-    font-size: 2.5rem;
-  }
-  .appointment .appointment__wrapper .appointment__content .appointment__btns i {
-    padding-left: 5rem;
-    top: 5rem;
-    font-size: 10rem;
-  }
-}
-
+/*    .get__steps h2{
+    @apply  bg-transparent border-[2px] border-berde text-berde px-5 py-2 rounded-full text-[1.5rem] font-semibold 
+    md:w-[3.5rem] md:mx-auto */
 .tns-controls {
   position: absolute;
   bottom: 10px;
@@ -3773,13 +3794,13 @@ body {
 .tns-controls button {
   padding: 0 1rem 0 1rem;
   font-size: 2rem;
-  border: 1px solid var(--light);
+  border: 1px solid #fff;
   border-radius: 50%;
-  background-color: var(--light);
+  background-color: #fff;
   padding: 1rem;
 }
 .tns-controls button i {
-  color: var(--accent);
+  color: #01b3a7;
 }
 
 .slider-container {
@@ -3839,7 +3860,7 @@ body {
   position: absolute;
   font-size: 2rem;
   width: 12.5rem;
-  color: var(--light);
+  color: #fff;
   bottom: 10px;
   left: 85%;
   top: 45%;

@@ -1,23 +1,28 @@
 @use '../abstract/' as *;
 .btn{
-    background: $clr-dark;
+    background: $clr-primary;
     padding:1.5rem,2.5rem;
     margin: 2rem 0;
-    font-weight: bold;
-    border-radius: 1rem;
     display:flex;
     transition: .5s ease;
-    font-family: Speedee-Bold;
+    color: black;
+    outline: $clr-dark 1px;
+    width: 15rem;
+    height: 5rem;
+    border-color: black;
+    
+
     @include d-flex(center, center);
         &:hover{
-            background: darken(#fff , 20);
+            background: $clr-accent;
         }
     &-primary{
         background: $clr-light;
     }
     $colorsbtn:(
         "light": $clr-light,
-        "dark": $clr-dark
+        "dark": $clr-dark,
+        "accent": $clr-accent,
 );
 //color classes assigner ex: class="container bg-yellow"
 @each $key, $val in $colorsbtn{
