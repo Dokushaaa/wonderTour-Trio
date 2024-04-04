@@ -77,6 +77,7 @@ $displays: flex, grid ,block, inline;
             gap: #{$i}rem;
         }
 }
+
 $justify: (
     "center": center,
     "between":space-between,

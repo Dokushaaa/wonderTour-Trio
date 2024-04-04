@@ -1,12 +1,3 @@
-:root {
-  --light: #f5f5f5;
-  --dark: #26252a;
-  --secondary: #303033;
-  --secondaryalt: #515156;
-  --accent: #f8565d;
-  --yellow: #efa83e ;
-}
-
 @font-face {
   font-family: "fl-bigmug-line";
   src: url("../../fonts/fl-bigmug-line.woff");
@@ -131,7 +122,7 @@ body {
 .banner--food {
   background-image: url("../../img/OF/Food_banner sm.jpg");
 }
-@media (min-width: 42.5rem) {
+@media (min-width: 576px) {
   .banner--food {
     background-image: url("../../img/OF/Food_banner lm.jpg");
   }
@@ -3455,15 +3446,16 @@ body {
 
 .btn {
   background: #fff;
-  padding: 1.5rem, 2.5rem;
   margin: 2rem 0;
   display: flex;
   transition: 0.5s ease;
   color: black;
   outline: #000 1px;
-  width: 15rem;
-  height: 5rem;
+  width: 13rem;
+  height: 4.5rem;
   border-color: black;
+  position: inherit;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3503,31 +3495,10 @@ body {
   text-decoration: underline;
 }
 
-.card__info {
-  opacity: 0.8;
-  margin: 1.5rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.card__info ul {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1rem;
-}
-.card__info li, .card__info small {
-  font-size: 1.5rem;
-  line-height: 0;
-}
-.card__info i {
-  font-size: 0.5rem;
-}
-
 .header {
   background-color: #000;
 }
-@media (min-width: 42.5rem) {
+@media (min-width: 576px) {
   .header .header__wrapper {
     display: flex;
     justify-content: space-between;
@@ -3578,7 +3549,7 @@ body {
 .footer__wrapper .footer__contacts .contacts__lists {
   padding: 2.5rem 0 1rem 0;
 }
-@media (min-width: 42.5rem) {
+@media (min-width: 576px) {
   .footer .footer__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
@@ -3590,6 +3561,18 @@ body {
   .footer .footer__wrapper .contacts__lists {
     gap: 4REM;
   }
+}
+
+@keyframes bgPos {
+  25% {
+    transform: translate3d(-150px, -150px, 0) rotate(0.001deg);
+  }
+  75% {
+    transform: translate3d(0, 0, 0) rotate(0.001deg);
+  }
+}
+.bgPos {
+  animation: bgPos 1s 100s linear infinite;
 }
 
 /* Breadcrumbs */
@@ -3679,15 +3662,47 @@ body {
   background-color: white;
 }
 .tours__tab {
-  box-sizing: border-box;
   padding: 4rem 0.5rem;
+  gap: 1rem;
+  justify-content: center;
+  position: absolute;
+  opacity: 0;
+  display: grid;
+  gap: 4rem;
+}
+@media (min-width: 992px) {
+  .tours__tab {
+    padding: 8rem 30rem;
+  }
+}
+.tours__item {
+  box-sizing: border-box;
+}
+@media (min-width: 992px) {
+  .tours__item {
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.17);
+    display: flex;
+    gap: 3rem;
+  }
 }
 .tours__item .tours__image {
   position: relative;
+  overflow: hidden;
 }
 .tours__item .tours__image img {
-  max-width: 37.2rem;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
+  cursor: pointer;
+}
+.tours__item .tours__image img:hover {
+  transform: scale(1.1);
+}
+@media (min-width: 992px) {
+  .tours__item .tours__image img {
+    width: 120rem;
+    height: 27rem;
+  }
 }
 .tours__item .tours__image .tours__price {
   position: absolute;
@@ -3704,6 +3719,11 @@ body {
   text-transform: uppercase;
   background: transparent;
   z-index: 1;
+}
+@media (min-width: 992px) {
+  .tours__item .tours__image .tours__price {
+    display: none;
+  }
 }
 .tours__item .tours__image .tours__price::before {
   position: absolute;
@@ -3747,6 +3767,51 @@ body {
   font-weight: 200;
   font-weight: 300;
 }
+.tours__item .tours__details button {
+  z-index: 999999;
+}
+.tours__item .tours__details .tours__price__lg {
+  display: none;
+}
+@media (min-width: 992px) {
+  .tours__item .tours__details .tours__price__lg {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    padding: 2.3rem 1.8rem;
+    top: -2rem;
+    right: 0;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+    color: #cccccc;
+    text-transform: uppercase;
+    background: transparent;
+    z-index: 1;
+  }
+  .tours__item .tours__details .tours__price__lg::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 14px;
+    width: 400%;
+    height: 100%;
+    background: #01b3a7;
+    transform: skew(45deg);
+    transform-origin: 50% 100%;
+    will-change: transform;
+    pointer-events: none;
+    z-index: -1;
+  }
+  .tours__item .tours__details .tours__price__lg span {
+    font-size: 1.6rem;
+    letter-spacing: 0.025em;
+    color: #ffffff;
+    display: block;
+  }
+}
 .tours__nav ul {
   display: flex;
   gap: 1rem;
@@ -3761,22 +3826,40 @@ body {
   width: 3rem;
   text-align: center;
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 600;
+}
+.tours__nav ul li h2:hover {
+  color: green;
+}
+.tours__nav ul li.active a h2 {
+  color: green;
 }
 .tours__nav ul li i {
   color: black;
-  padding: 4px 5px;
+  padding: 7px 5px;
   background-color: transparent;
   border-radius: 50%;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.17);
   width: 3rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+.tours__nav ul li i:hover {
+  color: green;
+}
+.tours__destination {
+  position: relative;
+  height: 250vh;
+}
+@media (min-width: 992px) {
+  .tours__destination {
+    height: 170vh;
+  }
+}
+.tours__tab.active {
+  opacity: 100%;
 }
 
-/*    .get__steps h2{
-    @apply  bg-transparent border-[2px] border-berde text-berde px-5 py-2 rounded-full text-[1.5rem] font-semibold 
-    md:w-[3.5rem] md:mx-auto */
 .tns-controls {
   position: absolute;
   bottom: 10px;
@@ -3809,7 +3892,7 @@ body {
   height: 90rem;
   overflow: hidden;
 }
-@media (min-width: 42.5rem) {
+@media (min-width: 576px) {
   .slider-container {
     width: 250rem;
     height: 80rem;
@@ -3830,7 +3913,7 @@ body {
   width: auto;
   height: auto;
 }
-@media (min-width: 42.5rem) {
+@media (min-width: 576px) {
   .slide img {
     width: 190rem;
     height: 75rem;
@@ -3847,7 +3930,7 @@ body {
   display: flex;
   z-index: 99999;
 }
-@media (min-width: 42.5rem) {
+@media (min-width: 576px) {
   .dot-buttons {
     left: 55%;
     top: 80%;
@@ -3868,7 +3951,7 @@ body {
   display: flex;
   z-index: 100000000000000000;
 }
-@media (min-width: 42.5rem) {
+@media (min-width: 576px) {
   .slider-text {
     left: 11%;
     top: 55%;
@@ -3887,7 +3970,7 @@ body {
   padding-right: 1rem;
   cursor: pointer;
 }
-@media (min-width: 42.5rem) {
+@media (min-width: 576px) {
   .dot {
     width: 2.5rem;
     overflow: hidden;

@@ -44,8 +44,30 @@
         @content;
     }
 }
-@mixin  mediaDeskQuery($m-width:$sm){
-    @media (max-width:$m-width){
+// XL
+@mixin mediaQuery__xl($width:$xl) {
+    @media (min-width:$width) {
+        @content;
+    }
+}
+
+// LG
+@mixin mediaQuery__lg($width:$lg) {
+    @media (min-width:$width) {
+        @content;
+    }
+}
+
+// MD
+@mixin mediaQuery__md($width:$md) {
+    @media (min-width:$width) {
+        @content;
+    }
+}
+
+// SM
+@mixin mediaQuery__sm($width:$sm) {
+    @media (min-width:$width) {
         @content;
     }
 }

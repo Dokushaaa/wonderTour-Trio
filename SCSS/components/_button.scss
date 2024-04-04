@@ -1,15 +1,16 @@
 @use '../abstract/' as *;
 .btn{
     background: $clr-primary;
-    padding:1.5rem,2.5rem;
     margin: 2rem 0;
     display:flex;
     transition: .5s ease;
     color: black;
     outline: $clr-dark 1px;
-    width: 15rem;
-    height: 5rem;
+    width: 13rem;
+    height: 4.5rem;
     border-color: black;
+  position:inherit;
+  cursor: pointer;
     
 
     @include d-flex(center, center);

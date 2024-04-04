@@ -1,12 +1,4 @@
-:root{
-    --light: #f5f5f5;
-    --dark: #26252a;
-    --secondary: #303033;
-    --secondaryalt: #515156;
-    --accent: #f8565d;
-    --yellow: #efa83e
 
-}
 
 //primary
 
@@ -17,12 +9,14 @@ $clr-dark: #000;
 $clr-gray: #e1e1e1;
 $clr-star: #ffcc00;
 $clr-grey: #d5d4d5;
+$clr-dark-accent: #016760;
 //non-primary colors
 
 //non-screen sizes
-$sm: "42.5rem";
-$md: "92rem";
-$lg: "144rem";
-$xl: "180rem";
+$sm: "576px";
+$md: "768px";
+$lg: "992px";
+$xl: "1200px";
+
 
 
