@@ -164,36 +164,20 @@ body {
   color: #26252a;
 }
 
-.bg-secondary {
-  background-color: #303033;
-}
-
-.text-secondary {
-  color: #303033;
-}
-
-.bg-secondaryalt {
-  background-color: #515156;
-}
-
-.text-secondaryalt {
-  color: #515156;
-}
-
-.bg-accent {
-  background-color: #f8565d;
-}
-
-.text-accent {
-  color: #f8565d;
-}
-
 .bg-yellow {
   background-color: #efa83e;
 }
 
 .text-yellow {
   color: #efa83e;
+}
+
+.bg-blue {
+  background-color: #162e44;
+}
+
+.text-blue {
+  color: #162e44;
 }
 
 .flex {
@@ -3776,7 +3760,7 @@ body {
 @media (min-width: 768px) {
   .tours__item .tours__image img {
     width: 120rem;
-    height: 27rem;
+    height: 34rem;
   }
 }
 @media (min-width: 992px) {
@@ -3961,7 +3945,7 @@ body {
 }
 .tours__destination {
   position: relative;
-  height: 290vh;
+  height: 220vh;
 }
 @media (min-width: 768px) {
   .tours__destination {
@@ -3985,6 +3969,68 @@ body {
 }
 .tours__tab.active {
   opacity: 100%;
+}
+
+/* FOOTER */
+.links__item h4 {
+  text-align: center;
+  font-weight: 500;
+}
+.links__item ul {
+  padding: 0 10rem;
+}
+
+.links__details ul li span {
+  color: #01b3a7;
+}
+.links__details ul li h5 {
+  color: #01b3a7;
+  font-size: 1.5rem;
+}
+.links__details ul li h5:hover {
+  color: #50ba87;
+}
+.links__details ul li p {
+  font-size: 1.3rem;
+  color: gray;
+  opacity: 50%;
+}
+.links__details .link {
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+.links__details .link li a {
+  font-size: 1.4rem;
+  display: inline-block;
+}
+.links__details .link li a:hover {
+  color: #01b3a7;
+}
+.links__details .link li::before {
+  background: #01b3a7;
+  height: 0.8rem;
+  width: 0.8rem;
+  margin-right: 8px;
+  position: relative;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  content: "";
+  border-radius: 50%;
+}
+.links__details button {
+  z-index: 999999;
+  color: #fff;
+  background: #01b3a7;
+  border: none;
+  margin: 3rem auto;
+  font-size: 1.8rem;
+  height: 6rem;
+  width: 16rem;
+}
+.links__details button:hover {
+  background: #50ba87;
 }
 
 .tns-controls {
