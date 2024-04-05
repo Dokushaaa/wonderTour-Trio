@@ -72,6 +72,34 @@
     }
 }
 
+@mixin mediaQuery__xxl($width:$xxl) {
+    @media (min-width:$width) {
+        @content;
+    }
+}
+
+// own utility for desktop first
+// SM
+@mixin mediaQueryMax__sm($width:$sm) {
+    @media (max-width:$width) {
+        @content;
+    }
+}
+
+// XL
+@mixin mediaQueryMax__xl($width:$xl) {
+    @media (max-width:$width) {
+        @content;
+    }
+}
+
+// XXL
+@mixin mediaQueryMax__xxl($width:$xxl) {
+    @media (max-width:$width) {
+        @content;
+    }
+}
+
 // even grid
 @mixin grid($cols: 1, $gap:1rem){
     display: grid;

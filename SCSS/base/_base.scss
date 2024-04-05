@@ -20,12 +20,14 @@
 
 body{
     font-family:  "JTUSjIg1_i6t8kCHKm459Wlhyw";
-    background-color: $clr-dark;
+    background-color: $clr-light;
     // background-color:red;
     color:rgba($clr-dark, 0.7);
     line-height: 1.6;
     font-size: 1.6rem;
-    cursor: crosshair; 
+    cursor: crosshair;
+   
+   
 }
 .container{
     max-width: 98rem;
@@ -72,6 +74,9 @@ h3{
 h4{
     font-size: clamp(1.4rem, 6vw,1.6rem);
     margin-bottom: 1.6rem;
+}
+h5:hover{
+    color: $clr-accent;
 }
 
 ul{

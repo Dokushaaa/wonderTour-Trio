@@ -16,7 +16,7 @@
 }
 body {
   font-family: "JTUSjIg1_i6t8kCHKm459Wlhyw";
-  background-color: #000;
+  background-color: #fff;
   color: rgba(0, 0, 0, 0.7);
   line-height: 1.6;
   font-size: 1.6rem;
@@ -73,6 +73,10 @@ h3 {
 h4 {
   font-size: clamp(1.4rem, 6vw, 1.6rem);
   margin-bottom: 1.6rem;
+}
+
+h5:hover {
+  color: #01b3a7;
 }
 
 ul {
@@ -3449,22 +3453,17 @@ body {
   margin: 2rem 0;
   display: flex;
   transition: 0.5s ease;
-  color: black;
-  outline: #000 1px;
   width: 13rem;
   height: 4.5rem;
-  border-color: black;
   position: inherit;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.btn:hover {
-  background: #01b3a7;
-}
 .btn-primary {
   background: #fff;
+  border-color: #01b3a7;
 }
 .btn .btnColor-light {
   background-color: #fff;
@@ -3576,6 +3575,15 @@ body {
 }
 
 /* Breadcrumbs */
+@media (min-width: 1200px) {
+  .breadcrumbs {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}
 .breadcrumbs__wrapper {
   position: relative;
   overflow: hidden;
@@ -3583,6 +3591,11 @@ body {
   text-align: center;
   background-color: #cccccc;
   z-index: 1;
+}
+@media (min-width: 1200px) {
+  .breadcrumbs__wrapper {
+    padding: 150px 0;
+  }
 }
 .breadcrumbs__wrapper h2 {
   font-size: 32px;
@@ -3594,6 +3607,22 @@ body {
   letter-spacing: normal;
   color: #fff;
 }
+@media (min-width: 1200px) {
+  .breadcrumbs__wrapper h2 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .breadcrumbs__wrapper h2 {
+    font-size: 36px;
+  }
+}
+@media (min-width: 768px) {
+  .breadcrumbs__wrapper h2 {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+}
 .breadcrumbs__wrapper ul {
   margin-top: 14px;
   margin-left: -15px;
@@ -3604,6 +3633,11 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif, Arial, sans-serif;
+}
+@media (min-width: 576px) {
+  .breadcrumbs__wrapper ul {
+    margin-top: 18px;
+  }
 }
 .breadcrumbs__wrapper li {
   position: relative;
@@ -3617,6 +3651,9 @@ body {
   display: inline;
   vertical-align: middle;
   transition: all 0.3s ease-in-out;
+}
+.breadcrumbs__wrapper a:hover {
+  text-decoration: underline;
 }
 .breadcrumbs__wrapper li:nth-child(1)::after {
   content: "/";
@@ -3656,13 +3693,33 @@ body {
 .breadcrumbs .container {
   position: relative;
 }
+@media (min-width: 1200px) {
+  .breadcrumbs .container {
+    max-width: 1200px;
+  }
+}
+@media (min-width: 992px) {
+  .breadcrumbs .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 768px) {
+  .breadcrumbs .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 576px) {
+  .breadcrumbs .container {
+    max-width: 540px;
+  }
+}
 
 /* Tours */
 .tours__wrapper {
   background-color: white;
 }
 .tours__tab {
-  padding: 4rem 0.5rem;
+  padding: 4rem 2rem;
   gap: 1rem;
   justify-content: center;
   position: absolute;
@@ -3670,7 +3727,7 @@ body {
   display: grid;
   gap: 4rem;
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .tours__tab {
     padding: 8rem 30rem;
   }
@@ -3678,11 +3735,28 @@ body {
 .tours__item {
   box-sizing: border-box;
 }
+@media (min-width: 1200px) {
+  .tours__item {
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.17);
+    display: flex;
+  }
+}
 @media (min-width: 992px) {
   .tours__item {
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.17);
     display: flex;
-    gap: 3rem;
+  }
+}
+@media (min-width: 768px) {
+  .tours__item {
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.17);
+    display: flex;
+  }
+}
+@media (min-width: 1600px) {
+  .tours__item {
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.17);
+    display: flex;
   }
 }
 .tours__item .tours__image {
@@ -3696,12 +3770,25 @@ body {
   cursor: pointer;
 }
 .tours__item .tours__image img:hover {
-  transform: scale(1.1);
+  transform: scale(1.3);
+  transition: ease-in-out 1s;
+}
+@media (min-width: 768px) {
+  .tours__item .tours__image img {
+    width: 120rem;
+    height: 27rem;
+  }
 }
 @media (min-width: 992px) {
   .tours__item .tours__image img {
     width: 120rem;
-    height: 27rem;
+    height: 33rem;
+  }
+}
+@media (min-width: 1200px) {
+  .tours__item .tours__image img {
+    width: 100rem;
+    height: 35rem;
   }
 }
 .tours__item .tours__image .tours__price {
@@ -3720,7 +3807,7 @@ body {
   background: transparent;
   z-index: 1;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .tours__item .tours__image .tours__price {
     display: none;
   }
@@ -3749,6 +3836,21 @@ body {
   margin: 2rem auto;
   position: relative;
 }
+@media (min-width: 1200px) {
+  .tours__item .tours__details {
+    padding: 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .tours__item .tours__details {
+    padding: 4rem;
+  }
+}
+@media (min-width: 768px) {
+  .tours__item .tours__details {
+    padding: 4rem;
+  }
+}
 .tours__item .tours__details h5 {
   color: black;
   font-weight: 400;
@@ -3756,6 +3858,7 @@ body {
 }
 .tours__item .tours__details h5:hover {
   color: #01b3a7;
+  transition: all 1s;
 }
 .tours__item .tours__details .tours__ratings i {
   color: #ffcc00;
@@ -3769,11 +3872,17 @@ body {
 }
 .tours__item .tours__details button {
   z-index: 999999;
+  color: black;
+  border-color: black;
+}
+.tours__item .tours__details button:hover {
+  background: #01b3a7;
+  border: none;
 }
 .tours__item .tours__details .tours__price__lg {
   display: none;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .tours__item .tours__details .tours__price__lg {
     display: block;
     position: absolute;
@@ -3812,6 +3921,9 @@ body {
     display: block;
   }
 }
+.tours__nav {
+  position: relative;
+}
 .tours__nav ul {
   display: flex;
   gap: 1rem;
@@ -3849,9 +3961,24 @@ body {
 }
 .tours__destination {
   position: relative;
-  height: 250vh;
+  height: 290vh;
+}
+@media (min-width: 768px) {
+  .tours__destination {
+    height: 180vh;
+  }
 }
 @media (min-width: 992px) {
+  .tours__destination {
+    height: 170vh;
+  }
+}
+@media (min-width: 1200px) {
+  .tours__destination {
+    height: 190vh;
+  }
+}
+@media (min-width: 1600px) {
   .tours__destination {
     height: 170vh;
   }

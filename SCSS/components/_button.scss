@@ -4,21 +4,17 @@
     margin: 2rem 0;
     display:flex;
     transition: .5s ease;
-    color: black;
-    outline: $clr-dark 1px;
     width: 13rem;
     height: 4.5rem;
-    border-color: black;
   position:inherit;
   cursor: pointer;
-    
+   
 
     @include d-flex(center, center);
-        &:hover{
-            background: $clr-accent;
-        }
+        
     &-primary{
         background: $clr-light;
+        border-color: $clr-accent;
     }
     $colorsbtn:(
         "light": $clr-light,
