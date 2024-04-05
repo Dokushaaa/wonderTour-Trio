@@ -6,18 +6,79 @@
     object-fit: cover;
 }
 
-@mixin mediaQuery($width:$sm) {
+// XL
+@mixin mediaQuery__xl($width:$xl) {
     @media (min-width:$width) {
         @content;
     }
 }
 
-// own utility
-@mixin mediaQueryMax($width:$sm) {
+// XXL
+@mixin mediaQuery__xxl($width:$xxl) {
+    @media (min-width:$width) {
+        @content;
+    }
+}
+
+// LG
+@mixin mediaQuery__lg($width:$lg) {
+    @media (min-width:$width) {
+        @content;
+    }
+}
+
+// MD
+@mixin mediaQuery__md($width:$md) {
+    @media (min-width:$width) {
+        @content;
+    }
+}
+
+// SM
+@mixin mediaQuery__sm($width:$sm) {
+    @media (min-width:$width) {
+        @content;
+    }
+}
+
+
+
+// own utility for desktop first
+// SM
+@mixin mediaQueryMax__sm($width:$sm) {
     @media (max-width:$width) {
         @content;
     }
 }
+
+// XL
+@mixin mediaQueryMax__xl($width:$xl) {
+    @media (max-width:$width) {
+        @content;
+    }
+}
+
+// XXL
+@mixin mediaQueryMax__xxl($width:$xxl) {
+    @media (max-width:$width) {
+        @content;
+    }
+}
+
+// LG
+@mixin mediaQueryMax__lg($width:$lg) {
+    @media (max-width:$width) {
+        @content;
+    }
+}
+
+// MD
+@mixin mediaQueryMax__md($width:$md) {
+    @media (max-width:$width) {
+        @content;
+    }
+}
+
 
 
 @mixin grid($cols: 1, $gap:1rem) {

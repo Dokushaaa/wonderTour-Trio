@@ -63,7 +63,11 @@
     overflow: visible;
     border: none;
     z-index: 1;
+
+    border-color: $clr-accent;
+    border: 2px solid;
 }
+
 
 .button__pipaluk::before {
     position: absolute;

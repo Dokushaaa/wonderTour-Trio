@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.min.css">
+
 </head>
 <body>
     <!-- Breadcrumbs -->
@@ -20,7 +21,7 @@
                     <li class="active">About</li>
                 </ul>
             </div>
-            <div class="box-position" style="background-image: url(images/breadcrumbs-bg.jpg);"></div>
+            <div class="box-position bgPos" style="background-image: url(images/breadcrumbs-bg.jpg);"></div>
         </div>
     </section>
 
@@ -215,7 +216,7 @@
                     </div>
 
                     <div class="destinations__caption">
-                        <a class="fl-bigmug-line-zoom60" href="#">
+                        <a class="destinations__icon"  href="#">
                             <img src="images/gallery-image-12-420x308.jpg" alt="" width="420" height="308">  
                         </a>
                     </div>
@@ -240,7 +241,7 @@
                 </div>
 
                 <div class="destinations__caption">
-                    <a href="#">
+                    <a class="destinations__icon" href="#">
                         <img src="images/gallery-image-13-420x308.jpg" alt="" width="420" height="308">  
                     </a>
                 </div>
@@ -265,7 +266,7 @@
                 </div>
 
                 <div class="destinations__caption">
-                    <a href="#">
+                    <a class="destinations__icon" href="#">
                         <img src="images/gallery-image-12-420x308.jpg" alt="" width="420" height="308">  
                     </a>
                 </div>
@@ -290,7 +291,7 @@
                 </div>
 
                 <div class="destinations__caption">
-                    <a href="#">
+                    <a  class="destinations__icon" href="#">
                         <img src="images/gallery-image-14-420x308.jpg" alt="" width="420" height="308">  
                     </a>
                 </div>
@@ -315,7 +316,7 @@
                 </div>
 
                 <div class="destinations__caption">
-                    <a href="#">
+                    <a class="destinations__icon" href="#">
                         <img src="images/gallery-image-15-420x308.jpg" alt="" width="420" height="308">  
                     </a>
                 </div>
@@ -340,7 +341,7 @@
                 </div>
 
                 <div class="destinations__caption">
-                    <a href="#">
+                    <a class="destinations__icon" href="#">
                         <img src="images/gallery-image-16-420x308.jpg" alt="" width="420" height="308">  
                     </a>
                 </div>
@@ -366,6 +367,8 @@
             <h3>What people Say</h3>
 
             <div class="testimonials__slider">
+
+                <div class="testimonials__slider__item">
                 <article class="testimonials__quote">
                     <div class="testimonials__quote__body">
                         <a class="testimonials__quote__profile" href="#">
@@ -384,7 +387,7 @@
                 </article>
             </div>
 
-            <div class="testimonials__slider">
+            <div class="testimonials__slider__item">
                 <article class="testimonials__quote">
                     <div class="testimonials__quote__body">
                         <a class="testimonials__quote__profile" href="#">
@@ -404,7 +407,7 @@
                 </article>
             </div>
 
-            <div class="testimonials__slider">
+            <div class="testimonials__slider__item">
                 <article class="testimonials__quote">
                     <div class="testimonials__quote__body">
                         <a class="testimonials__quote__profile" href="#">
@@ -423,6 +426,8 @@
                     </div>
                 </article>
             </div>
+            </div>
+            
         </div>
     </section>
 
@@ -455,7 +460,18 @@
                         </div>
                         
                     </div>
-        
+                    
+                    <div class="counter__item">
+                        <div class="counter__details">
+                            <div class="counter__number">
+                                <span>2</span>
+                                <span class="symbol">k</span>
+                            </div>
+                        <h5>Travelers</h5>
+                        </div>
+                
+                    </div>
+
                     <div class="counter__item">
                             <div class="counter__details">
                                 <div class="counter__number">
@@ -506,8 +522,52 @@
         items: 1,
         slideBy: "page",
         autoplay: false,
+        autoplayButtonOutput: false,
+        mouseDrag: true,
+        controlsText: [
+          '<i class="fa-solid fa-arrow-left-long"></i>',
+          '<i class="fa-solid fa-arrow-right-long"></i>',
+        ],
+        responsive: {
+          1200: {
+            items: 4,
+            gutter: 30,
+            nav: false,  
+            controls: false,
+          },
+
+          200: {
+            items: 1,
+            gutter: 30,
+            nav: true,  
+            controls: false,
+          },
+
+          1600: {
+            items: 4,
+            gutter: 30,
+            nav: false, 
+            controls: true,
+          }
+        },
+
+        768: {
+            items: 2,
+            gutter: 20,
+            nav:true,
+            controls: false,
+        }
+        
+      });
+
+      var testimonials__slider = tns({
+        container: ".testimonials__slider",
+        items: 1,
+        slideBy: "page",
+        autoplay: true,
         controls: false,
         autoplayButtonOutput: false,
+        mode: "gallery",
       });
 
 </script>

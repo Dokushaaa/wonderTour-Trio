@@ -23,43 +23,187 @@
 
     
 // }
-
-.tns-outer {
-    position: relative;  
-   .tns-nav {
-        position: absolute;
-        bottom: 0;
-        margin-top: 25px;
-        text-align: center;
-        font-size: 0;
-        line-height: 0;
-        width: 100%;
-        box-sizing: border-box;
-    
-        transform: translate(-50%);
-        top: 28rem;
-        left: 50%;
-        z-index: 10;
-
-        button {
+.destinations {
+    .tns-outer {
+        position: relative;  
+        
+       .tns-nav {
+            position: absolute;
+            bottom: 0;
+            margin-top: 40px;
             text-align: center;
-            display: inline-block;
-            position: relative;
-            width: 12px;
-            height: 12px;
-            border: none;
-            border-radius: 0;
-            margin-left: 6px;
-            margin-right: 6px;
-            outline: none;
-            transition: .2s;
-        }
+            font-size: 0;
+            line-height: 0;
+            width: 100%;
+            box-sizing: border-box;
+        
+            // transform: translate(-50%);
+            top: 28rem;
+            // left: 50%;
+            z-index: 10;
+    
+            button {
+                @include mediaQuery__lg {
+                    margin-left: 4px;
+                    margin-right: 4px;
+                }
+                text-align: center;
+                display: inline-block;
+                position: relative;
+                width: 12px;
+                height: 12px;
+                border: none;
+                border-radius: 0;
+                margin-left: 6px;
+                margin-right: 6px;
+                outline: none;
+                transition: .2s;
+            }
 
-        & button.tns-nav-active {
-            background-color: $clr-accent;
+            button:hover {
+                background-color: $clr-dark;
+            }
+    
+            & button.tns-nav-active {
+                background-color: $clr-accent;
+            }
+            
         }
+    
         
     }
+}
 
     
+
+.testimonials {
+    .tns-outer {
+        position: relative;  
+        z-index: 3;
+        overflow: hidden;
+        -webkit-transform: translate3d(0px, 0px, 0px);
+
+        box-sizing: border-box;
+
+        padding-top: 19px;
+        padding-bottom: 15px;
+       .tns-nav {
+            position: absolute;
+            bottom: 0;
+            margin-top: 25px;
+            text-align: center;
+            font-size: 0;
+            line-height: 0;
+            width: 100%;
+            box-sizing: border-box;
+        
+            // transform: translate(-50%);
+            // top: 50rem;
+            // left: 50%;
+            z-index: 10;
+    
+            button {
+                text-align: center;
+                display: inline-block;
+                position: relative;
+                width: 12px;
+                height: 12px;
+                border: none;
+                border-radius: 0;
+                margin-left: 6px;
+                margin-right: 6px;
+                outline: none;
+                transition: .2s;
+            }
+            
+            button:hover {
+                background-color: $clr-dark;
+            }
+
+            & button.tns-nav-active {
+                background-color: $clr-accent;
+            }
+            
+        }  
+    }    
+
+    .tns-outer::after {
+        top: 9px;
+        right: 30px;
+        left: 30px;
+        height: 9px;
+        background: #f4f4f4;
+        z-index: 2;
+
+        position: absolute;
+        content: '';
+
+        box-sizing: border-box;
+    }
+
+    .tns-outer::before {
+        top: 0;
+        right: 55px;
+        left: 55px;
+        height: 18px;
+        background: #e8e8e8;
+        z-index: 1;
+
+        position: absolute;
+        content: '';
+
+        box-sizing: border-box;
+    }
+}
+
+.tns-controls {
+    // @include flex (space-between, center);
+    // margin: 2rem 0;
+    // button {
+    //     background: transparent;
+    //     border: none;
+    //     font-size: 3rem;
+    //     color: $clr-light;
+    // }
+
+//     @include mediaQueryMax {
+//         position: static;
+//         @include flex (space-between, center);
+//        margin: 2rem 0;
+//        button {
+//         @include mediaQueryMax {
+//             font-size: 1.5rem;
+//         }
+
+//            background: transparent;
+//            border: none;
+//            font-size: 3rem;
+//            color: $clr-dark;
+//         }
+//    }
+
+    position: absolute;
+
+    @include mediaQuery__xxl {
+        top: 15rem;
+        bottom: 30rem;
+        left: -6rem;
+        display: flex ;
+        gap: 181rem;
+    }
+
+    z-index: 999;
+    button {
+      font-size: 3rem;
+      @include flex(center, center);
+      
+      border: none;
+      color: #cdcdcd
+    }
+
+    button:hover {
+        color: $clr-accent;
+        transition: .33s all ease;
+    }
+
 }
