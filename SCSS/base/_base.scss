@@ -30,9 +30,11 @@ body{
    
 }
 .container{
-    max-width: 98rem;
     padding: 0 1.6rem;
     margin:0 auto;
+    @include mediaQuery__lg{
+        padding: 0 15rem;
+    }
 }
 body.open{
  overflow: hidden;

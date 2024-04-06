@@ -21,18 +21,11 @@
 /* Breadcrumbs */
 .breadcrumbs {
 
-    @include mediaQuery__xl {
-        max-width: 1920px;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 75px;
-        padding-right: 75px;
-        
-    }
+   
 
     &__wrapper {
         @include mediaQuery__xl {
-            padding: 150px 0;
+            padding: 150px 75px;
         }
 
         position: relative;
@@ -52,10 +45,9 @@
             }
 
             @include mediaQuery__md {
-                font-size: 48px;
+                font-size: 47px;
                 line-height: 1.2;
-            } 
-
+            }  
             font-size: 32px;
             line-height: 1.2;
             margin-top: 0;
@@ -164,6 +156,7 @@
 
 /* Tours */
 .tours{
+    
     &__wrapper{
         background-color: white;
     }
@@ -439,13 +432,13 @@ ul li i{
         height: 170vh;
     }
     @include mediaQuery__xl{
-        height: 190vh;
+        height: 220vh;
     }
     @include mediaQuery__xxl{
         height: 170vh;
     }
     position: relative;
-    height: 220vh;
+    height: 280vh;
 }
 
 
@@ -455,87 +448,6 @@ ul li i{
 
 }
 
-/* FOOTER */
 
-.links__item{
-    h4{
-     text-align: center;  
-      font-weight: 500;
-    }
-    ul{
-        padding: 0 10rem;
-
-        
-    }
-    
-}
-
-.links__details{
-    ul li span{
-        color: $clr-accent;
-    }
-    ul li {
-        h5{
-          color: $clr-accent;
-          
-          font-size: 1.5rem;
-        &:hover{
-            color: #50ba87;
-        }   
-        }
-
-        p{
-            font-size: 1.3rem;
-            color:gray;
-            opacity: 50%;
-
-        }
-       
-    }
-    .link{ 
-       
-        padding: 0;
-        display: flex; 
-        gap: 2rem;
-
-        li a{
-           font-size: 1.4rem;
-           display: inline-block;
-            &:hover{
-                color: $clr-accent;
-            }
-        }
-        li::before {
-            background: $clr-accent;
-            height: .8rem;
-            width: .8rem;
-            margin-right: 8px;
-
-            position: relative;
-            display: inline-block;
-            top: 0;
-            left: 0;
-            content: '';
-            border-radius: 50%;
-
-            
-        }
-    }
-    button{
-        z-index: 999999;
-        color: $clr-light;
-        background: $clr-accent;
-        border:none;
-        margin: 3rem auto;
-        font-size: 1.8rem;
-        height: 6rem;
-        width: 16rem;
-        
-        &:hover{
-            background: #50ba87;
-        }
-    
-    }
-}
 
 

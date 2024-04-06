@@ -1,41 +1,176 @@
 @use '../abstract/' as *;
 
-.footer{
-    background-color: $clr-dark;
-    &__wrapper{
-        padding:5rem 2rem;
-        .copyright{
-            padding-bottom: 5rem;
+
+
+
+/*SUB FOOTER */
+
+.sub-footer-content{
+    @include mediaQuery__lg{
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 0;
+        grid-gap: 10rem;
+    }
+    }
+    .links__item{
+       
+    
+        h4{
+         text-align: center;  
+          font-weight: 500;
+          @include mediaQuery__lg{
+            text-align: left;
+    }
         }
-        .social__links{
+        ul{
+            padding: 0 10rem;
+            @include mediaQuery__lg{
+                padding: 0;
+        }
+        }
+        
+    }
+    
+    .links__details{
+        ul li span{
+            color: $clr-accent;
+        }
+        ul li {
+            h5{
+              color: $clr-accent;
+              font-weight: 350;
+              font-size: 1.5rem;
+            &:hover{
+                color: #50ba87;
+            }   
+            }
+    
+            p{
+                font-size: 1.3rem;
+                color:gray;
+                opacity: 50%;
+    
+            }
            
-            .social__links__btns{
-                @include d-flex(flex-start, space-between);
-                gap:2rem;
-                li{
-                   i{
-                    color:$clr-accent;
-                    font-size: 2.5rem;
-                   }
+        }
+        .link{ 
+            @include mediaQuery__lg{
+                display: grid;
+                grid-template-columns: 1fr 1fr ;
+                gap: 0;
+            }
+            padding: 0;
+            display: flex; 
+            gap: 2rem;
+    
+            li a{
+               font-size: 1.4rem;
+               display: inline-block;
+                &:hover{
+                    color: $clr-accent;
                 }
             }
+            li::before {
+                background: $clr-accent;
+                height: .8rem;
+                width: .8rem;
+                margin-right: 8px;
+    
+                position: relative;
+                display: inline-block;
+                top: 0;
+                left: 0;
+                content: '';
+                border-radius: 50%;
+    
+                
+            }
         }
-        .footer__contacts{
-            .contacts__lists{
-                padding:2.5rem 0 1rem 0;
+        button{
+            @include mediaQuery__lg{
+                margin: 3rem 0;
+            }
+            z-index: 999999;
+            color: $clr-light;
+            background: $clr-accent;
+            border:none;
+            margin: 3rem auto;
+            font-size: 1.8rem;
+            height: 6rem;
+            width: 16rem;
+            
+            &:hover{
+                background: #50ba87;
+            }
+        
+        }
+    }
+
+    /* FOOTER */
+.footer {
+    padding: 2.5rem;
+    background-color:#11263a;
+    &_wrapper {
+        text-align: center;
+        opacity: 30%;
+
+        .p2{
+       @include mediaQuery__lg{
+        order:1;
+       }
+        }
+        .p3{
+            cursor: pointer;
+            p{
+              &:hover{
+            color: #01b3a7;
+            opacity: 100%;  
+            }
+            
+        }
+       @include mediaQuery__lg{
+        order:3;
+        
+       }
+        }
+        p {
+            font-size: clamp(1rem, 7vw, 1.5rem);
+            font-weight: 500;
+            font-size: 1.2rem;
+            
+            @include mediaQuery__lg{
+                margin:1rem 0;
+            }
+        }
+        ul {
+            display: flex;
+            gap: 2rem; 
+            margin:1rem 0;
+            justify-content: center;
+            cursor: pointer;
+            
+            @include mediaQuery__lg{
+                order: 2;
+                
+            }
+            
+
+        }
+        .social_icons {
+            font-size: 1.4rem;
+            &:hover{
+                color:#01b3a7;
+                opacity: 100%;
             }
            
         }
-       
-    }
-    @include mediaQuery{
-        .footer__wrapper{
-           @include unevenGrid(1fr 1fr 2fr, 5rem);
-            align-self: center;
-           padding:5rem 25rem 1rem 25rem;
-            .contacts__lists{
-                gap: 4REM;
-            }
+
+        @include mediaQuery {
+            display:flex;
+            justify-content: space-between;
+            gap: 2rem;
+            padding: 0;
         }
     }
 }
+
