@@ -735,7 +735,7 @@ p {
   line-height: 40px;
   padding-left: 5px;
   padding-right: 5px;
-  height: 40px;
+  height: 5px;
   width: 54px;
   background-color: transparent;
   font: 400 46px/50px "FontAwesome";
@@ -790,7 +790,7 @@ p {
   line-height: 40px;
   padding-left: 5px;
   padding-right: 5px;
-  height: 40px;
+  height: 5px;
   width: 54px;
   background-color: transparent;
   font: 400 46px/50px "FontAwesome";
@@ -1959,7 +1959,6 @@ p {
   padding: 19px 10px;
   letter-spacing: 0.025em;
   background: #ffffff;
-  box-shadow: 2px 3px 6px 0 rgba(0, 0, 0, 0.17);
   box-sizing: border-box;
   display: block;
 }
@@ -2089,6 +2088,7 @@ p {
   position: relative;
   z-index: 1;
   padding: 60px 0;
+  box-sizing: border-box;
 }
 @media (min-width: 992px) {
   .counter__content {
@@ -2121,7 +2121,7 @@ p {
 }
 @media (min-width: 576px) {
   .counter__content .container {
-    max-width: 450px;
+    max-width: 30px;
   }
 }
 @media (min-width: 1200px) {
@@ -2162,7 +2162,6 @@ p {
 @media (max-width: 992px) {
   .counter__wrapper {
     margin-bottom: -72px;
-    flex-wrap: wrap;
   }
 }
 .counter__item {
@@ -2234,7 +2233,17 @@ p {
   height: 1px;
   box-sizing: border-box;
 }
-@media (min-width: 576px) {
+@media (min-width: 992px) {
+  .counter__item:nth-child(3)::before {
+    display: inline-block;
+  }
+}
+@media (max-width: 768px) {
+  .counter__item:nth-child(3)::before {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
   .counter__item:nth-child(3)::before {
     display: inline-block;
   }
