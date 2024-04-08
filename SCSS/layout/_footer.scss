@@ -20,6 +20,7 @@
           font-weight: 500;
           @include mediaQuery__lg{
             text-align: left;
+            
     }
         }
         ul{
@@ -32,14 +33,22 @@
     }
     
     .links__details{
+      
+       @include mediaQuery__lg{
+        justify-items: left;
+       }
+        
         ul li span{
             color: $clr-accent;
+        
         }
         ul li {
+             
             h5{
               color: $clr-accent;
               font-weight: 350;
               font-size: 1.5rem;
+             
             &:hover{
                 color: #50ba87;
             }   
@@ -54,17 +63,18 @@
            
         }
         .link{ 
+            justify-content: center;
             @include mediaQuery__lg{
                 display: grid;
                 grid-template-columns: 1fr 1fr ;
-                gap: 0;
+                gap: 0; 
             }
             padding: 0;
             display: flex; 
             gap: 2rem;
-    
+            
             li a{
-               font-size: 1.4rem;
+               font-size: 1.2rem;
                display: inline-block;
                 &:hover{
                     color: $clr-accent;
@@ -113,6 +123,7 @@
     &_wrapper {
         text-align: center;
         opacity: 30%;
+        
 
         .p2{
        @include mediaQuery__lg{
@@ -138,7 +149,7 @@
             font-weight: 500;
             font-size: 1.2rem;
             
-            @include mediaQuery__lg{
+            @include mediaQuery__md{
                 margin:1rem 0;
             }
         }

@@ -32,8 +32,9 @@ body{
 .container{
     padding: 0 1.6rem;
     margin:0 auto;
-    @include mediaQuery__lg{
-        padding: 0 15rem;
+    @include mediaQuery__xl{
+        padding: 0 30rem;
+        max-width: 300vh;
     }
 }
 body.open{
