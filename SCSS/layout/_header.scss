@@ -1,0 +1,43 @@
+@use "../abstract/" as *;
+.header{
+    // box-shadow: 5px 10px $clr-secondary;
+    background-color: $clr-dark;
+    @include mediaQuery{
+      .header__wrapper{
+        img{
+          width: auto;
+          height: 15rem;
+        }
+        @include d-flex(space-between,space-between);
+        ul{
+          @include d-flex(center,center);
+          gap:2rem;
+        }
+        // ul{
+        //   @include grid(5,3rem);
+         
+        //   li{
+        //     width: 5rem;
+        //     padding:unset;
+        //     a{
+        //       padding-right: 2rem;
+        //     }
+        //   }
+        // }
+       
+      }
+    }
+    &__wrapper{
+        @include d-flex(space-between,center);
+        img{
+            
+            height:25rem;
+        }
+      ul{
+        li{
+            padding:1rem 2rem;
+        }
+      }
+        
+    }
+}

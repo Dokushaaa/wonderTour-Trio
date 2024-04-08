@@ -1,0 +1,41 @@
+@use '../abstract/' as *;
+
+.footer{
+    background-color: $clr-dark;
+    &__wrapper{
+        padding:5rem 2rem;
+        .copyright{
+            padding-bottom: 5rem;
+        }
+        .social__links{
+           
+            .social__links__btns{
+                @include d-flex(flex-start, space-between);
+                gap:2rem;
+                li{
+                   i{
+                    color:$clr-accent;
+                    font-size: 2.5rem;
+                   }
+                }
+            }
+        }
+        .footer__contacts{
+            .contacts__lists{
+                padding:2.5rem 0 1rem 0;
+            }
+           
+        }
+       
+    }
+    @include mediaQuery{
+        .footer__wrapper{
+           @include unevenGrid(1fr 1fr 2fr, 5rem);
+            align-self: center;
+           padding:5rem 25rem 1rem 25rem;
+            .contacts__lists{
+                gap: 4REM;
+            }
+        }
+    }
+}

@@ -1,0 +1,105 @@
+//for permanent elements
+@use '../abstract/' as *;
+
+// banner images utils: test run
+$food--banner: url('../../img/OF/Food_banner\ sm.jpg') ;
+
+$banners:(
+   
+    "food":$food--banner
+);
+@each $key, $val in $banners{
+    .banner--#{$key}{
+        background-image: #{$val};
+        @include mediaQuery{
+            background-image: url('../../img/OF/Food_banner\ lm.jpg');
+        }
+    }
+}
+$width:("full":100%, "half":50%, "one-fourth":25%, "one-third":33.33333%);
+@each $key, $val in $width{
+    .w-#{$key}{
+        width:#{$val};
+    }
+}
+
+
+//color classes array
+$colors:(
+    light: #f5f5f5,
+    dark: #26252a,
+    secondary: #303033,
+    secondaryalt: #515156,
+    accent: #f8565d,
+    yellow: #efa83e
+
+);
+//color classes assigner ex: class="container bg-yellow"
+@each $key, $val in $colors{
+    .bg-#{$key}{
+        background-color: #{$val};
+    }
+    .text-#{$key}{
+        color: #{$val};
+    }
+}
+//displayus (ex margin bottom) ex: class="container flex"
+$displays: flex, grid ,block, inline;
+@each $display in $displays{
+    .#{$display}{
+        display: #{$display};
+    }
+}
+//number loops (ex margin bottom) class="container my-69 px-31"
+@for $i from 1 through 100{
+    .mb-#{$i}{
+        margin-bottom:0 0 #{$i}rem 0;
+    }
+    .my-#{$i}{
+        margin:#{$i}rem 0;
+    }
+    .mx-#{$i}{
+        margin:0 #{$i}rem;
+    }
+    .p-#{$i}{
+        padding: #{$i}rem;
+        }
+    .py-#{$i}{
+    padding: #{$i}rem 0;
+    }
+    .ptop-#{$i}{
+        padding-top: #{$i}rem;
+        }
+    .px-#{$i}{
+        padding:0 #{$i}rem;
+    }
+        .gap-#{$i}{
+            gap: #{$i}rem;
+        }
+}
+$justify: (
+    "center": center,
+    "between":space-between,
+    "end": flex-end
+);
+$align:(
+    "center":center,
+    "end":flex-end
+);
+@each $key,  $val in $justify{
+    .justify-#{$key}{
+        justify-content: #{$val};
+    }
+}
+@each $key,  $val in $align{
+    .justify-#{$key}{
+        justify-content:#{$val};
+    }
+}
+// alignment
+$alignments: left, center, right, justify;
+@each $alignment in $alignments{
+    .text-#{$alignment}{
+        text-align: #{$alignment}
+    }
+}

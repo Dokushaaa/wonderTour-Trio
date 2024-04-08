@@ -1,0 +1,30 @@
+:root{
+    --light: #f5f5f5;
+    --dark: #26252a;
+    --secondary: #303033;
+    --secondaryalt: #515156;
+    --accent: #f8565d;
+    --yellow: #efa83e
+
+}
+
+//primary
+
+$clr-light: var(--light);
+$clr-dark: var(--dark);
+$clr-secondary: var(--secondary);
+$clr-secondaryalt: var(--secondaryalt);
+$clr-accent: var(--accent);
+$clr-yellow: var(--yellow);
+// $clr-accent: #f16b4e;
+// $clr-primary: #232323;
+// $clr-secondary: #1f1f1f;
+//non-primary colors
+
+//non-screen sizes
+$sm: "42.5rem";
+$md: "92rem";
+$lg: "144rem";
+$xl: "180rem";
+
+

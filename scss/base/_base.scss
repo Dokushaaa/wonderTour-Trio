@@ -27,8 +27,7 @@ body {
     color: #151515;
     background-color: #ffffff;
     -webkit-text-size-adjust: none;
-    -webkit-font-smoothing: subpixel-antialiased;
-    scroll-behavior: smooth;
+    -webkit-font-smoothing: subpixel-antialiased
    
 }
 
@@ -39,6 +38,7 @@ body.open {
 
 a {
     text-decoration: none;
+    color: $clr-light;
 }
 
 ul {
@@ -98,6 +98,14 @@ h5 {
 }
 
 p {
+    font-size: clamp(1.4rem, 6vw , 1.6rem);
     margin-bottom: 1.3rem;
-    color: $clr-dark;
+    text-wrap: balance;
+    color: $clr-light;
+}
+
+.container {
+    max-width: 98rem;
+    padding: 0 1.6rem;
+    margin: 0 auto;
 }
