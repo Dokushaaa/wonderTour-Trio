@@ -466,7 +466,7 @@
                     <div class="counter__item">
                         <div class="counter__details">
                             <div class="counter__number">
-                                <span>194</span>
+                                <span id="counter">194</span>
                             </div>
                             <h5>Tours</h5>
                         </div>
@@ -476,8 +476,7 @@
                     <div class="counter__item">
                         <div class="counter__details">
                             <div class="counter__number">
-                                <span>2</span>
-                                <span class="symbol">k</span>
+                                <span>2</span><span class="symbol">k</span>
                             </div>
                         <h5>Travelers</h5>
                         </div>
@@ -648,12 +647,29 @@
       uiTop.classList.remove("sticky");
       
   }
+  
 });
 
-// let showPic = document.querySelector('.destinations__icon')
-// showPic.addEventListener("click", () => {
-    
-// });
+// JavaScript
+$("#counter").counter({
+  autoStart: false,           // true/false, default: true
+  duration: 5000,             // milliseconds, default: 1500
+  countFrom: 10,              // start counting at this number, default: 0
+  countTo: 30,                // count to this number, default: 0
+  runOnce: true,              // only run the counter once, default: false
+  placeholder: "?",           // replace the number with this before counting,
+                              // most useful with autoStart: false. default: undefined
+  easing: "easeOutCubic",     // see http://gsgd.co.uk/sandbox/jquery/easing
+                              // for all available effects, see visual examples:
+                              // http://easings.net
+                              // default: "easeOutQuad"
+  onStart: function() {},     // callback on start of the counting
+  onComplete: function() {},  // callback on completion of the counting
+  numberFormatter:            // function used to format the displayed numbers.
+    function(number) {
+      return "$ " + number;
+    }
+});
 
 </script>
 </body>
