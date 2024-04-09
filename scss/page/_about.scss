@@ -465,7 +465,7 @@
         }
 
         &__link.active::after {
-            width: 100%;
+            width: 110%;
         }
 
       }
@@ -1135,6 +1135,8 @@
     animation: fadeIn 1s ease-in-out forwards;
 }
 
+
+
 .testimonials {
     padding: 30px;
     padding-bottom: 60px;
@@ -1245,10 +1247,8 @@
         box-shadow: 2px 3px 6px 0 rgba(0, 0, 0, 0.17);
         transition: opacity 5s;  
         opacity: 1;
-
         box-sizing: border-box;
         display: block;
-
     }
 
     &__quote {
