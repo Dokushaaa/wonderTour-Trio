@@ -52,6 +52,12 @@
     background: $clr-accent;
 }
 
+.button__primary:hover {
+    color: #ffffff;
+    background-color: $clr-accent;
+    border-color: $clr-accent;
+}
+
 .button__black__outline {
     color: #151515;
     background-color: transparent;
@@ -66,6 +72,7 @@
 
 .button__pipaluk {
     padding: 20px 33px 19px;
+    background: transparent;
     position: relative;
     overflow: visible;
     border: none;
@@ -75,8 +82,15 @@
     border: 2px solid;
 }
 
+.button__primary .button__pipaluk:hover {
+    color: #151515;
+    background: transparent;
+}
+
 
 .button__pipaluk::before {
+    background: #01b3a7;
+    border-color: #151515;
     position: absolute;
     content: '';
     top: 0;
@@ -96,7 +110,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    border-width: 2px;
+    border-width: 1px;
     border-style: solid;
     opacity: 0;
     visibility: hidden;
@@ -106,6 +120,21 @@
     z-index: -1;
 
     border-color: #151515;
+}
+
+.button__pipaluk:hover::before {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.9);
+    transition-duration: .2s;
+}
+
+.button__pipaluk:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition-duration: .3s;
+    transition-delay: .1s;
 }
 
 .button__md {
