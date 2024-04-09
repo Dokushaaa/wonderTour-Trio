@@ -15,7 +15,7 @@
 }
 
 .bgPos {
-    animation: bgPos 1s 100s linear infinite;;
+    animation: bgPos 1s 100s linear infinite;
 }
 
 
@@ -1240,7 +1240,9 @@
         padding: 30px 10px;
         background: #ffffff;
         box-shadow: 2px 3px 6px 0 rgba(0, 0, 0, 0.17);
-        
+        transition: opacity 5s;  
+        opacity: 1;
+
         box-sizing: border-box;
         display: block;
 
@@ -1345,8 +1347,49 @@
     }
 }
 
+@keyframes progressBar_79 {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 79%;
+    }
+  }
+  
+  .progressBar_79 {
+    width: 0; 
+    animation: progressBar_79 1s linear; 
+  }
 
-.counter {
+  @keyframes progressBar_72 {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 72%;
+    }
+  }
+  
+  .progressBar_72 {
+    width: 0; 
+    animation: progressBar_72 1s linear; 
+  }
+
+  @keyframes progressBar_88 {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 88%;
+    }
+  }
+  
+  .progressBar_88 {
+    width: 0; 
+    animation: progressBar_88 1s linear; 
+  }
+
+.parallax {
     @include mediaQuery__xxl {
         padding-left: 75px;
         padding-right: 75px;
@@ -1705,3 +1748,12 @@
     color: $clr-dark;
 }
 
+// ANIMATED
+
+.animated {
+    -webkit-animation-duration: .7s;
+    animation-duration: .7s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    opacity: 1;
+}

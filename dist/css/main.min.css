@@ -1867,6 +1867,8 @@ p {
   padding: 30px 10px;
   background: #ffffff;
   box-shadow: 2px 3px 6px 0 rgba(0, 0, 0, 0.17);
+  transition: opacity 5s;
+  opacity: 1;
   box-sizing: border-box;
   display: block;
 }
@@ -1964,7 +1966,46 @@ p {
   box-sizing: border-box;
 }
 
-.counter {
+@keyframes progressBar_79 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 79%;
+  }
+}
+.progressBar_79 {
+  width: 0;
+  animation: progressBar_79 1s linear;
+}
+
+@keyframes progressBar_72 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 72%;
+  }
+}
+.progressBar_72 {
+  width: 0;
+  animation: progressBar_72 1s linear;
+}
+
+@keyframes progressBar_88 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 88%;
+  }
+}
+.progressBar_88 {
+  width: 0;
+  animation: progressBar_88 1s linear;
+}
+
+.parallax {
   padding-top: 0;
   background-size: cover;
   background-position: center center;
@@ -1972,18 +2013,18 @@ p {
   box-sizing: border-box;
 }
 @media (min-width: 1600px) {
-  .counter {
+  .parallax {
     padding-left: 75px;
     padding-right: 75px;
   }
 }
-.counter__container {
+.parallax__container {
   display: block;
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
 }
-.counter__material {
+.parallax__material {
   position: absolute;
   top: 0;
   left: -1px;
@@ -1991,7 +2032,7 @@ p {
   bottom: 0;
   box-sizing: border-box;
 }
-.counter__material img {
+.parallax__material img {
   display: block;
   transform: translate3d(-50%, 83px, 0px);
   position: absolute;
@@ -2007,28 +2048,28 @@ p {
   overflow: clip;
 }
 @media (min-width: 1200px) {
-  .counter__material img {
+  .parallax__material img {
     display: block;
     transform: translate3d(-50%, 145px, 0px);
   }
 }
-.counter__content {
+.parallax__content {
   position: relative;
   z-index: 1;
   padding: 60px 0;
   box-sizing: border-box;
 }
 @media (min-width: 992px) {
-  .counter__content {
+  .parallax__content {
     padding: 100px 0;
   }
 }
 @media (min-width: 768px) {
-  .counter__content {
+  .parallax__content {
     padding: 90px 0;
   }
 }
-.counter__content .container {
+.parallax__content .container {
   max-width: 540px;
   width: 100%;
   padding-right: 7.5px;
@@ -2038,26 +2079,26 @@ p {
   box-sizing: border-box;
 }
 @media (min-width: 992px) {
-  .counter__content .container {
+  .parallax__content .container {
     max-width: 1200px;
   }
 }
 @media (min-width: 768px) {
-  .counter__content .container {
+  .parallax__content .container {
     max-width: 720px;
   }
 }
 @media (min-width: 576px) {
-  .counter__content .container {
+  .parallax__content .container {
     max-width: 350px;
   }
 }
 @media (min-width: 1200px) {
-  .counter__content .container {
+  .parallax__content .container {
     max-width: 546px;
   }
 }
-.counter__content::before {
+.parallax__content::before {
   background: rgba(43, 49, 59, 0.26);
   position: absolute;
   content: "";
@@ -2068,7 +2109,7 @@ p {
   pointer-events: none;
   box-sizing: border-box;
 }
-.counter__wrapper {
+.parallax__wrapper {
   margin-bottom: -50px;
   justify-content: center;
   display: flex;
@@ -2078,21 +2119,21 @@ p {
   box-sizing: border-box;
 }
 @media (max-width: 576px) {
-  .counter__wrapper {
+  .parallax__wrapper {
     flex-wrap: wrap;
   }
 }
 @media (max-width: 768px) {
-  .counter__wrapper {
+  .parallax__wrapper {
     flex-wrap: wrap;
   }
 }
 @media (max-width: 992px) {
-  .counter__wrapper {
+  .parallax__wrapper {
     margin-bottom: -72px;
   }
 }
-.counter__item {
+.parallax__item {
   position: relative;
   margin-bottom: 50px;
   flex-shrink: 0;
@@ -2104,25 +2145,25 @@ p {
   box-sizing: border-box;
 }
 @media (min-width: 576px) {
-  .counter__item {
+  .parallax__item {
     position: relative;
     flex: 0 0 auto;
     width: 50%;
   }
 }
 @media (min-width: 992px) {
-  .counter__item {
+  .parallax__item {
     flex: 0 0 auto;
     width: 25%;
   }
 }
 @media (min-width: 768px) {
-  .counter__item {
+  .parallax__item {
     flex: 0 0 auto;
     width: 60%;
   }
 }
-.counter__item:nth-child(2)::before {
+.parallax__item:nth-child(2)::before {
   background: rgba(244, 244, 244, 0.55);
   display: inline-block;
   position: absolute;
@@ -2135,12 +2176,12 @@ p {
   box-sizing: border-box;
 }
 @media (min-width: 576px) {
-  .counter__item:nth-child(2)::before {
+  .parallax__item:nth-child(2)::before {
     display: inline-block;
   }
 }
 @media (min-width: 576px) {
-  .counter__item:nth-child(2)::before {
+  .parallax__item:nth-child(2)::before {
     top: 50%;
     left: 0;
     width: 1px;
@@ -2149,7 +2190,7 @@ p {
     transform: none;
   }
 }
-.counter__item:nth-child(3)::before {
+.parallax__item:nth-child(3)::before {
   background: rgba(244, 244, 244, 0.55);
   display: inline-block;
   position: absolute;
@@ -2162,22 +2203,22 @@ p {
   box-sizing: border-box;
 }
 @media (min-width: 992px) {
-  .counter__item:nth-child(3)::before {
+  .parallax__item:nth-child(3)::before {
     display: inline-block;
   }
 }
 @media (max-width: 768px) {
-  .counter__item:nth-child(3)::before {
+  .parallax__item:nth-child(3)::before {
     display: none;
   }
 }
 @media (max-width: 576px) {
-  .counter__item:nth-child(3)::before {
+  .parallax__item:nth-child(3)::before {
     display: inline-block;
   }
 }
 @media (min-width: 576px) {
-  .counter__item:nth-child(3)::before {
+  .parallax__item:nth-child(3)::before {
     top: 50%;
     left: 0;
     width: 1px;
@@ -2186,7 +2227,7 @@ p {
     transform: none;
   }
 }
-.counter__item:nth-child(4)::before {
+.parallax__item:nth-child(4)::before {
   background: rgba(244, 244, 244, 0.55);
   display: inline-block;
   position: absolute;
@@ -2199,12 +2240,12 @@ p {
   box-sizing: border-box;
 }
 @media (min-width: 576px) {
-  .counter__item:nth-child(4)::before {
+  .parallax__item:nth-child(4)::before {
     display: inline-block;
   }
 }
 @media (min-width: 576px) {
-  .counter__item:nth-child(4)::before {
+  .parallax__item:nth-child(4)::before {
     top: 50%;
     left: 0;
     width: 1px;
@@ -2213,11 +2254,11 @@ p {
     transform: none;
   }
 }
-.counter__details {
+.parallax__details {
   text-align: center;
   box-sizing: border-box;
 }
-.counter__details h5 {
+.parallax__details h5 {
   color: #fff;
   font-weight: 400;
   letter-spacing: 0.05em;
@@ -2225,11 +2266,11 @@ p {
   text-transform: uppercase;
 }
 @media (min-width: 992px) {
-  .counter__details h5 {
+  .parallax__details h5 {
     font-size: 21px;
   }
 }
-.counter__number {
+.parallax__number {
   font-size: 50px;
   line-height: 0.8;
   font-weight: 300;
@@ -2240,32 +2281,32 @@ p {
   box-sizing: border-box;
 }
 @media (min-width: 1200px) {
-  .counter__number {
+  .parallax__number {
     font-size: 110px;
   }
 }
 @media (min-width: 992px) {
-  .counter__number {
+  .parallax__number {
     font-size: 70px;
   }
 }
-.counter__number span {
+.parallax__number span {
   display: inline-block;
   box-sizing: border-box;
   color: #fff;
   font-weight: 400;
 }
 @media (min-width: 1200px) {
-  .counter__number span {
+  .parallax__number span {
     font-size: 110px;
   }
 }
-.counter__number .symbol {
+.parallax__number .symbol {
   font-size: 40px;
   letter-spacing: 0;
 }
 @media (min-width: 1200px) {
-  .counter__number .symbol {
+  .parallax__number .symbol {
     font-size: 70px;
   }
 }
@@ -2281,4 +2322,10 @@ p {
   border-color: #01b3a7;
   background-color: #01b3a7;
   color: #000;
+}
+
+.animated {
+  animation-duration: 0.7s;
+  animation-fill-mode: both;
+  opacity: 1;
 }/*# sourceMappingURL=main.min.css.map */
