@@ -1,28 +1,19 @@
 @use '../abstract' as  *;
-// .tns-outer {
-//     position: relative;  
-//    .tns-nav {
-//         position: absolute;
-//         bottom: 1rem;
-//         left: 50%;
-//         transform: translate(-50%);
-//         z-index: 10;
-//         button {
-//             margin: 0 .5rem;
-//             width: 10px;
-//             height: 10px;
-//             border-radius: 100%;
-//             border: none;
-//         }
 
-//         & button.tns-nav-active {
-//             background-color: $clr-accent;
-//         }
-        
-//     }
+@keyframes slideDown {
+     0% {
+        opacity: 0;
+        transform: translateY(-200%);
+        transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s 0.3s;
+      }
+      100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0%);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+  }
 
-    
-// }
 .destinations {
     .tns-outer {
         position: relative;  
@@ -71,8 +62,9 @@
                 background-color: $clr-dark;
             }
     
-            & button.tns-nav-active {
+            button.tns-nav-active {
                 background-color: $clr-accent;
+                animation: slideDown .3s ease-in-out
             }
             
         }
@@ -129,10 +121,11 @@
                 background-color: $clr-dark;
             }
 
-            & button.tns-nav-active {
+            button.tns-nav-active {
                 background-color: $clr-accent;
+                animation: slideDown .3s ease-in-out
             }
-            
+
         }  
     }    
 

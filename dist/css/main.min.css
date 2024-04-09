@@ -518,6 +518,19 @@ p {
   transition: all 0.3s ease-in;
 }
 
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-200%);
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s 0.3s;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+}
 .destinations .tns-outer {
   position: relative;
   z-index: 3;
@@ -560,6 +573,7 @@ p {
 }
 .destinations .tns-outer .tns-nav button.tns-nav-active {
   background-color: #01b3a7;
+  animation: slideDown 0.3s ease-in-out;
 }
 
 .testimonials .tns-outer {
@@ -601,6 +615,7 @@ p {
 }
 .testimonials .tns-outer .tns-nav button.tns-nav-active {
   background-color: #01b3a7;
+  animation: slideDown 0.3s ease-in-out;
 }
 .testimonials .tns-outer::after {
   top: 9px;
@@ -1236,6 +1251,16 @@ p {
 @media (min-width: 768px) {
   .chooseUs__tabs__content {
     margin-top: 30px;
+  }
+}
+.chooseUs__tabs__content:first-child {
+  margin-top: 20px;
+  box-sizing: border-box;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .chooseUs__tabs__content:first-child {
+    margin-top: 40px;
   }
 }
 .chooseUs__tabpane {
@@ -1978,7 +2003,7 @@ p {
 }
 .progressBar_79 {
   width: 0;
-  animation: progressBar_79 1s linear;
+  animation: progressBar_79 0.9s linear;
 }
 
 @keyframes progressBar_72 {
@@ -1991,7 +2016,7 @@ p {
 }
 .progressBar_72 {
   width: 0;
-  animation: progressBar_72 1s linear;
+  animation: progressBar_72 0.9s linear;
 }
 
 @keyframes progressBar_88 {
@@ -2004,7 +2029,7 @@ p {
 }
 .progressBar_88 {
   width: 0;
-  animation: progressBar_88 1s linear;
+  animation: progressBar_88 0.9s linear;
 }
 
 .parallax {

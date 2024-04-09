@@ -480,6 +480,15 @@
         text-align: left;
     }
 
+    &__tabs__content:first-child {
+        @include mediaQuery__md {
+            margin-top: 40px;
+        }
+
+        margin-top: 20px;
+        box-sizing: border-box;
+        text-align: left;
+    }
 
     &__tabpane {
 
@@ -1351,7 +1360,7 @@
   
   .progressBar_79 {
     width: 0; 
-    animation: progressBar_79 1s linear; 
+    animation: progressBar_79 .9s linear; 
   }
 
   @keyframes progressBar_72 {
@@ -1365,7 +1374,7 @@
   
   .progressBar_72 {
     width: 0; 
-    animation: progressBar_72 1s linear; 
+    animation: progressBar_72 .9s linear; 
   }
 
   @keyframes progressBar_88 {
@@ -1379,7 +1388,7 @@
   
   .progressBar_88 {
     width: 0; 
-    animation: progressBar_88 1s linear; 
+    animation: progressBar_88 .9s linear; 
   }
 
 .parallax {
