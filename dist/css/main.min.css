@@ -104,10 +104,13 @@ h5 {
 }
 
 p {
-  font-size: clamp(1.4rem, 6vw, 1.6rem);
-  margin-bottom: 1.3rem;
-  text-wrap: balance;
-  color: #fff;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+  margin: 0;
 }
 
 .bg-primary {
@@ -1242,8 +1245,6 @@ p {
   transition: opacity 0.15s linear;
   box-sizing: border-box;
   text-align: left;
-  --bs-gutter-x: 30px;
-  --bs-gutter-y: 0;
 }
 .chooseUs__tabpane p {
   margin: 0;

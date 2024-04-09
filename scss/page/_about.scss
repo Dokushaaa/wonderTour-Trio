@@ -234,10 +234,6 @@
             flex-wrap: wrap; 
          }
          
-    
-        
-
-
         margin-top: calc(-1 * 0);
         margin-right: calc(-.5* 30px);
         margin-left: calc(-.5* 30px);
@@ -250,8 +246,7 @@
 
         @include mediaQuery__lg {
             flex: 0 0 auto;
-            width: 41.66667%;
-            
+            width: 41.66667%;      
         }
 
         @include mediaQuery__xl {
@@ -263,7 +258,7 @@
          @include mediaQuery__md {
             flex: 0 0 auto;
             width: 83.33333%;
-            
+  
         }
         margin-bottom: 50px;
 
@@ -497,9 +492,6 @@
         box-sizing: border-box;
         text-align: left;
 
-        --bs-gutter-x: 30px;
-        --bs-gutter-y: 0;
-
         p {
             margin: 0;
             box-sizing: border-box;
@@ -648,6 +640,7 @@
             }
         }
     }
+
 
     &__skills {
 
