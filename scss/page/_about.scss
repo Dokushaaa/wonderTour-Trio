@@ -728,6 +728,12 @@
            }
 
            &__counter {
+
+            @media (min-width: 768px)
+            {
+                font-size: 48px;
+            }
+
             position: absolute;
             top: 50%;
             left: 51%;
@@ -736,11 +742,6 @@
             transform: translate(-50%, -50%);
             color: $clr-dark;
            }
-
-        //    &__counter::after {
-        //         content: "%";
-        //         box-sizing: border-box;
-        //    }
 
            p {
               font-size: 14px;

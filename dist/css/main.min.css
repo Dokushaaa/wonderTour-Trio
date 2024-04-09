@@ -1461,6 +1461,11 @@ p {
   transform: translate(-50%, -50%);
   color: #000;
 }
+@media (min-width: 768px) {
+  .chooseUs__skills__progress__counter {
+    font-size: 48px;
+  }
+}
 .chooseUs__skills__progress p {
   font-size: 14px;
   letter-spacing: 0.05em;
