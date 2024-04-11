@@ -3850,7 +3850,7 @@ p {
     max-width: 540px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .sub-footer-content {
     grid-template-columns: 1fr 1fr 1fr;
     padding: 0;

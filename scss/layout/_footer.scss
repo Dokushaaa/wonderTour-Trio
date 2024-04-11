@@ -39,7 +39,7 @@
         margin-left: auto;
     }
 
-    @include mediaQuery__lg{
+    @include mediaQuery__md{
         grid-template-columns: 1fr 1fr 1fr;
         padding: 0;
         grid-gap: 10rem;
