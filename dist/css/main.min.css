@@ -3862,8 +3862,6 @@ p {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-top: 0;
 }
 .links__item h4 {
