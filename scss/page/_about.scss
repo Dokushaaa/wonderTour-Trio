@@ -241,8 +241,6 @@
     }
 
     &__image {
-       
-       
 
         @include mediaQuery__lg {
             flex: 0 0 auto;
@@ -1093,10 +1091,11 @@
             font-weight: 400;
             font-style: normal;
             text-transform: none;
-            content: "🔍︎";
-            font-size: 40px;
+            content: "\f00e";
+            font-size: 37px;
             
-            // font-family: 'Font Awesome 6 Free';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
             box-sizing: border-box;
             // color: $clr-light;
         }
@@ -1695,6 +1694,7 @@
             letter-spacing: .05em;
             font-size: 16px;
             text-transform: uppercase;
+            white-space: nowrap;
         }
     }
 

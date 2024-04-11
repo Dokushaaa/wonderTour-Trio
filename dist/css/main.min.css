@@ -47,12 +47,12 @@ body.open {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: #000;
 }
 
 ul {
   list-style: none;
-  color: #fff;
+  color: #000;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1822,8 +1822,10 @@ p {
   font-weight: 400;
   font-style: normal;
   text-transform: none;
-  content: "🔍︎";
-  font-size: 40px;
+  content: "\f00e";
+  font-size: 37px;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
   box-sizing: border-box;
 }
 .destinations__description {
@@ -2325,6 +2327,7 @@ p {
   letter-spacing: 0.05em;
   font-size: 16px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 @media (min-width: 992px) {
   .parallax__details h5 {
