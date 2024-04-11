@@ -108,12 +108,3 @@ p {
     unicode-bidi: isolate;
     margin: 0;
 }
-
-.container{
-    padding: 0 1.6rem;
-    margin:0 auto;
-    @include mediaQuery__xl{
-        padding: 0 30rem;
-        max-width: 300vh;
-    }
-}

@@ -508,7 +508,7 @@
                 <h4>CONTACT US</h4>
                 <div class="links__details">
                 <ul class=" gap-2 grid">
-                    <li class="gap-2 flex"> <span class="icon fa fa-phone"></span><a  href="tel:#">+1 323-913-4688</a></li>
+                    <li class="gap-2 flex"> <span class="icon fa fa-phone"></span><a href="tel:#">+1 323-913-4688</a></li>
                     <li class="gap-2 flex"><span class="icon fa fa-envelope"></span><a href="mailto:#">info@demolink.org</a></li>
                     <li class="gap-2 flex"><span class="icon fa fa-location-arrow"></span><a href="#">4730 Crystal Springs Dr, Los Angeles, CA 90027</a></li>
                   </ul>
@@ -675,6 +675,7 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 <script src="/jquery.counterup.min.js"></script>
 
+
 <script>
     jQuery(document).ready(function($){
         $('.counter').counterUp({
@@ -683,19 +684,28 @@
         });
     });
 
-    // let progress = document.querySelectorAll('.chooseUs__progress__bar__linear'),
-    //     spans = document.querySelectorAll('.chooseUs__progress__value');
 
-    //     progress.forEach((prog) => {
-    //         prog.style.width = prog.dataset.width;
+document.addEventListener('DOMContentLoaded', function() {
+  const parallaxMaterial = document.querySelector('.parallax__material img');
+  let initialTranslateY = 151; // Initial translateY value
+  let lastScrollPosition = 0; // Variable to store the last scroll position
+  
+  window.addEventListener('scroll', function() {
+    let scrollPosition = window.scrollY;
+    let scrollDirection = scrollPosition > lastScrollPosition ? 'down' : 'up'; // Determine scroll direction
 
-    //     });
+    // Adjust translateY based on scroll direction
+    if (scrollDirection === 'down') {
+      initialTranslateY += 1; // Increment translateY when scrolling down
+    } else {
+      initialTranslateY = Math.max(0, initialTranslateY - 1); // Decrement translateY when scrolling up, but keep it >= 0
+    }
 
-    //     spans.forEach((span) => {
-    //         span.style.left = span.dataset.num;
-    //         span.style.opacity = '1';
-    //         span.style.visibility = 'visible';
-    //     });
+    parallaxMaterial.style.transform = `translate3d(-50%, ${initialTranslateY}px, 0)`;
+    lastScrollPosition = scrollPosition; // Update last scroll position
+  });
+});
+
 
 </script>
 </body>

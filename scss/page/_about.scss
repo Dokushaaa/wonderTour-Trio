@@ -1434,7 +1434,6 @@
         left: -1px;
         right: -1px;
         bottom: 0;
-
         box-sizing: border-box;
 
         img {
@@ -1445,6 +1444,7 @@
             display: block;
             transform: translate3d(-50%, 83px, 0px);
 
+            overflow-y: scroll;
             position: absolute;
             left: 50%;
             bottom: 0;
