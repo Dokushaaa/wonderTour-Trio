@@ -484,6 +484,16 @@ p {
   text-overflow: ellipsis;
 }
 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
 .back-top {
   right: 15px;
   bottom: 15px;
@@ -499,6 +509,7 @@ p {
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   scroll-behavior: smooth;
+  animation: fadeInUp 0.4s ease-in-out;
 }
 @media (min-width: 1600px) {
   .back-top {
@@ -2152,7 +2163,7 @@ p {
 }
 @media (min-width: 576px) {
   .parallax__content .container {
-    max-width: 350px;
+    max-width: 370px;
   }
 }
 @media (min-width: 1200px) {
