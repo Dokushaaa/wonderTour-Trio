@@ -468,11 +468,14 @@
 
       }
 
-      &__tabs__content {
+      #reason-1-content {
         @include mediaQuery__md {
             margin-top: 30px;
         }
+      }
 
+
+      &__tabs__content {
         margin-top: 20px;
         box-sizing: border-box;
         text-align: left;

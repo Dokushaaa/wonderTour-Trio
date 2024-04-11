@@ -1272,15 +1272,15 @@ p {
 .chooseUs .nav__link.active::after {
   width: 110%;
 }
+@media (min-width: 768px) {
+  .chooseUs #reason-1-content {
+    margin-top: 30px;
+  }
+}
 .chooseUs__tabs__content {
   margin-top: 20px;
   box-sizing: border-box;
   text-align: left;
-}
-@media (min-width: 768px) {
-  .chooseUs__tabs__content {
-    margin-top: 30px;
-  }
 }
 .chooseUs__tabs__content:first-child {
   margin-top: 20px;
