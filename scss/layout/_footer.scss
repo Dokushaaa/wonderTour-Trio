@@ -1,5 +1,88 @@
 @use '../abstract/' as *;
 
+@keyframes bgPos{
+    25% {
+     transform: translate3d(-150px, -150px, 0) rotate(0.001deg);
+     }
+ 
+     75% {
+         transform: translate3d(0, 0, 0) rotate(0.001deg);
+     } 
+ }
+ @keyframes fadeInUp{
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes fadeInDown{
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 25% 0%;
+    }
+    100% {
+        background-position: 40% 80%;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translate3d(-100%, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.bgPos {
+    animation: bgPos 1s 100s linear infinite;
+}
+.gradient{
+   animation: Gradient 15s ease forwards;
+}
+.fadeInUp{
+   animation: fadeInUp 1s ease-out;
+}
+.fadeInDown{
+   animation: fadeInDown 1s ease-out;
+}
+.fadeInLeft{
+   animation: fadeInLeft 1s ease-out;
+}
+.fadeInRight{
+   animation: fadeInRight 1s ease-out;
+}
+.tagAnimation{
+   animation:tagAnimation 0.3s linear infinite ;
+}
+
 .links {
     padding: 50px 0;
     color: $clr-light;
