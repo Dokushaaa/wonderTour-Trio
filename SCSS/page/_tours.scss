@@ -210,22 +210,25 @@
 
 /* Tours */
 .tours{
-    
+    position: relative;
+    justify-content: center;
+    margin: 0 auto;
     &__wrapper{
         background-color: white;
     }
     &__tab{
+        transition: opacity 0.15s linear;
         @include mediaQuery__xl{
             padding: 8rem 30rem;
         }
-        padding: 4rem 2rem;
+        padding: 3rem .8rem;
         gap: 1rem;
         justify-content: center;
-        position: absolute;
-        opacity: 0;
-        display: grid;
+        // position: absolute;
+        // opacity: 0;
+        // display: grid;
         gap: 4rem;
-        
+        display:none;
         
     }
     &__item{
@@ -256,24 +259,14 @@
             
         }
         
-        box-sizing: border-box;
         
         .tours__image{
-            position: relative;
             overflow: hidden;
-
-
-
-            img{
-                width:100%;
-                height: auto;
-                margin: 0 auto;
-                cursor: pointer;
-                 &:hover{
-                    transform: scale(1.1);
-                    transition:ease-in-out 1s;
-                }
-            
+            position: relative;
+            display: block;       
+            object-fit: cover;
+            width: 100%;
+            // max-width: 800px;
             @include mediaQuery__md{
                 width: 200rem;
                 height: 34rem;    
@@ -283,9 +276,21 @@
                     height: 33rem;    
                 } 
                 @include mediaQuery__xl{
-                    width: 140rem;
+                    width: 100rem;
                     height: 35rem;    
                 } 
+
+           
+
+
+            img{
+                transform: scale(1.1);
+                cursor: pointer;
+                &:hover {
+                    transform: scale(.99);
+                    transition: .4s ease-in-out all;
+                }
+
             }
 
             
@@ -299,7 +304,6 @@
                 position: absolute;
                 overflow: hidden;
                 text-align: center;
-                padding: .5rem .8rem;
                 top: 0;
                 right: 0;
                 font-size: 18px;
@@ -327,7 +331,9 @@
                 
 
                 span{
-                    font-size: 1.6rem;
+                    font-size: 2rem;
+                    font-weight: 600;
+                    padding: .5rem 1rem;
                     letter-spacing: .025em;
                     color: #ffffff;
                     display: block;
@@ -343,17 +349,21 @@
             position: relative;
             @include mediaQuery__xl{
                 padding: 4rem;
+                margin: 2rem 0;
+                margin-left: 5rem;
+                
             }
             @include mediaQuery__lg{
                 padding: 4rem;
+                
             }
             @include mediaQuery__md{
                 padding: 4rem;
             }
             h5{
             color: black;  
-            font-weight: 400;
-            font-size: 1.8rem;
+            font-weight: 500;
+            font-size: 2rem;
             
             &:hover{
                 color: $clr-accent;
@@ -363,28 +373,31 @@
             
             }
             .tours__ratings{
+                padding: .5rem 0;
                 i{
                 color: $clr-star;  
-                font-size: 1rem;
+                font-size: 1.3rem;
                 }
                 
             }
             p{
                 color: gray;
-                font-size: 1.2rem;
+                font-size: 1.4rem;
                 font-weight: 200;
                 font-weight: 300;
             }
             button{
                 z-index: 999999;
                 color: black;
-                border-color: black;
+                font-size: 1.7rem;
+                font-weight: 400;
                 &:hover{
-                    background: $clr-accent;
-                   border: none;
+                    border-color: transparent;
                 }
-            
+
             }
+
+            
 
             .tours__price__lg{
                 @include mediaQuery__md{
@@ -392,10 +405,9 @@
                     position: absolute;
                     overflow: hidden;
                     text-align: center;
-                    padding: 2.3rem  1.8rem;
+                    padding: 3rem  2rem;
                     top: -2rem;
                     right: 0;
-                    font-size: 24px;
                     line-height: 1;
                     font-weight: 500;
                     letter-spacing: .025em;
@@ -411,8 +423,8 @@
                     width: 400%;
                     height: 100%;
                     background: #01b3a7;
-                    transform: skew(45deg);
-                    transform-origin: 50% 100%;
+                    transform: skew(50deg);
+                    transform-origin: 50% 85%;
                     will-change: transform;
                     pointer-events: none;
                     z-index: -1;
@@ -420,7 +432,7 @@
                     
         
                     span{
-                        font-size: 1.6rem;
+                        font-size: 2rem;
                         letter-spacing: .025em;
                         color: #ffffff;
                         display: block;
@@ -437,11 +449,10 @@
     }
     
     &__nav{
-        position:relative;
-        padding-bottom: 2rem;
-        
-        
-        
+       margin-bottom: 40px;
+       display: block;
+       unicode-bidi: isolate;
+      
         ul{
             display: flex;
             gap: 1rem;
@@ -449,67 +460,71 @@
         }
     ul li h2{
     color: black;
-    padding: 12px 5px;
+    padding: 8px 5px;
     background-color:transparent;
     border-radius: 50%;
     box-shadow:0 0 6px 0 rgba(0, 0, 0, 0.17);
     width: 5rem;
     text-align: center;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.9rem;
+    font-weight: 550;
     &:hover{
-        color: green;
+        color: $clr-accent;
     }
 
 }
 
 ul li.active a h2{
-    color: green;  
+    color: $clr-accent;  
  
   
 }
 
 ul li i{
     color: black;
-    padding: 16px 5px;
+    padding: 14px 5px;
     background-color:transparent;
     border-radius: 50%;
     box-shadow:0 0 6px 0 rgba(0, 0, 0, 0.17);
     width: 5rem;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     &:hover{
-        color: green;
+        color: $clr-accent;
     }
     
 }
 }
-&__destination{
-    position: relative;
-    @media screen and (min-width: 533px){
-        height: 270vh; 
-    }
-    @include mediaQuery__md{
-        height: 170vh;
-    }
-    @include mediaQuery__lg{
-        height: 160vh;
-    }
-    @include mediaQuery__xl{
-        height: 180vh;
-    }
-    @include mediaQuery__xxl{
-        height: 170vh;
-    }
-    position: relative;
-    height: 220vh;
-}
+// &__destination{
+//     position: relative;
+//     @media screen and (min-width: 533px){
+//         height: 270vh; 
+//     }
+//     @include mediaQuery__md{
+//         height: 170vh;
+//     }
+//     @include mediaQuery__lg{
+//         height: 160vh;
+//     }
+//     @include mediaQuery__xl{
+//         height: 180vh;
+//     }
+//     @include mediaQuery__xxl{
+//         height: 170vh;
+//     }
+//     position: relative;
+//     height: 220vh;
+// }
 
 
 &__tab.active{
-    opacity: 100%;
-    z-index: 999;
+    // opacity: 100%;
+    // z-index: 999;
+    display:grid;
+    
 }
+
+
 
 
 }

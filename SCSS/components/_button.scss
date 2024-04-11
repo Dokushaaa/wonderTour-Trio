@@ -1,30 +1,28 @@
 @use '../abstract/' as *;
 .btn{
-    background: $clr-primary;
-    margin: 2rem 0;
-    display:flex;
-    transition: .5s ease;
-    width: 13rem;
-    height: 4.5rem;
-  position:inherit;
+  background: $clr-primary;
+  width: 16rem;
+  height: 5rem;
+  position:relative;
+  padding:2.5rem 2rem;
   cursor: pointer;
-   
-
-    @include d-flex(center, center);
-        
-    &-primary{
-        background: $clr-light;
-        border-color: $clr-accent;
-    }
-    $colorsbtn:(
-        "light": $clr-light,
-        "dark": $clr-dark,
-        "accent": $clr-accent,
-);
-//color classes assigner ex: class="container bg-yellow"
-@each $key, $val in $colorsbtn{
-    .btnColor-#{$key}{
-        background-color: #{$val};
-    }
+  @include d-flex(center, center);
 }
+
+.btn::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+.btn1::before{
+    width: 0;
+    height: 100%;
+    background: $clr-accent;
+}
+.btn1:hover::before{
+    width: 100%;
+    transition: .2 ease;
+
 }
