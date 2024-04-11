@@ -7,6 +7,7 @@ $colors: (
     "dark" : $clr-dark,
     "gray" : $clr-gray,
     "dark-accent" : $clr-dark-accent,
+    "blue" : $clr-dark-blue,
 );
 
 @each $key, $val in $colors {
@@ -16,13 +17,6 @@ $colors: (
 
     .text-#{$key} {
         color: #{$val};
-    }
-}
-
-$displays: flex, grid, block, inline;
-@each $display in $displays {
-    .#{$display} {
-        display: #{$display};
     }
 }
 
@@ -62,5 +56,72 @@ $width: (
 @each $key, $val in $width {
     .w-#{$key} {
         width: #{$val};
+    }
+}
+
+// ADDED
+$justify: (
+    "center": center,
+    "between":space-between,
+    "end": flex-end
+);
+
+@each $key,  $val in $justify{
+    .justify-#{$key}{
+        justify-content: #{$val};
+    }
+}
+
+$align:(
+    "center":center,
+    "end":flex-end
+);
+
+@each $key,  $val in $align{
+    .justify-#{$key}{
+        justify-content:#{$val};
+    }
+}
+
+//number loops (ex margin bottom) class="container my-69 px-31"
+@for $i from 1 through 100{
+    .mb-#{$i}{
+        margin-bottom:0 0 #{$i}rem 0;
+    }
+    .my-#{$i}{
+        margin:#{$i}rem 0;
+    }
+    .mx-#{$i}{
+        margin:0 #{$i}rem;
+    }
+    .p-#{$i}{
+        padding: #{$i}rem;
+        }
+    .py-#{$i}{
+    padding: #{$i}rem 0;
+    }
+    .ptop-#{$i}{
+        padding-top: #{$i}rem;
+        }
+    .px-#{$i}{
+        padding:0 #{$i}rem;
+    }
+        .gap-#{$i}{
+            gap: #{$i}rem;
+        }
+}
+
+//displayus (ex margin bottom) ex: class="container flex"
+$displays: flex, grid ,block, inline;
+@each $display in $displays{
+    .#{$display}{
+        display: #{$display};
+    }
+}
+
+$width:("full":100%, "half":50%, "one-fourth":25%, "one-third":33.33333%);
+@each $key, $val in $width{
+    .w-#{$key}{
+        width:#{$val};
     }
 }

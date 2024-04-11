@@ -508,7 +508,7 @@
             display: block;
             text-align: left;
 
-            font-size: 1.5rem;
+            font-size: 14px;
             margin-block-start: 1em;
             margin-block-end: 1em;
             margin-inline-start: 0px;
@@ -580,6 +580,7 @@
         }
 
         &__value::after {
+
             content: "%";
             box-sizing: border-box;
         }
@@ -729,7 +730,7 @@
            }
 
            &__counter {
-
+            display: flex;
             @media (min-width: 768px)
             {
                 font-size: 48px;
@@ -752,6 +753,18 @@
               text-align: center;
 
            }
+
+           &__counter::after {
+            @include mediaQuery__md {
+                content: "%";
+                font-size: 36px;
+                margin-top: 8px;
+            }
+
+            content: "%";
+            box-sizing: border-box;
+           }
+           margin-top: 1px;
 
         }
 
@@ -1698,6 +1711,7 @@
             text-transform: uppercase;
             white-space: nowrap;
         }
+
     }
 
     &__number {
