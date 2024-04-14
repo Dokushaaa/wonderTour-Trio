@@ -38,14 +38,29 @@
     padding:0 1.6rem;
     margin: 2rem auto;
 }
-//does not require a child-selector if used.
 @mixin  mediaQuery($m-width:$sm){
     @media (min-width:$m-width){
         @content;
     }
 }
-@mixin  mediaDeskQuery($m-width:$sm){
+@mixin  mediaQueryT2P($m-width:$sm){
     @media (max-width:$m-width){
+        @content;
+    }
+}
+@mixin  mediaQueryD2T($m-width:$md){
+    @media (max-width:$m-width){
+        @content;
+    }
+}
+
+@mixin  mediaQuerySL($m-width:$laptop){
+    @media (max-width:$m-width){
+        @content;
+    }
+}
+@mixin  mediaQueryLL($m-width:$lg){
+    @media (min-width:$m-width){
         @content;
     }
 }
@@ -79,3 +94,33 @@
     justify-content: $justify;
     align-items: $align;
 }
+@mixin px-var($px:auto){
+    padding-left: $px;
+    padding-right: $px;
+}
+@mixin py-var($py:0){
+    padding-top: $py;
+    padding-bottom: $py;
+}
+@mixin mx-auto($mx:auto){
+    margin: 0 $mx;
+}
+
+
+// omega clamp:
+@mixin clamp($property, $min-size, $scaler, $max-size, $min-size-left:false, $scaler-left:false, $max-size-left:false){
+    @if $min-size-left == false {
+      #{$property}:$max-size; 
+      #{$property}:#{"min(max(#{$min-size}, #{$scaler}), #{$max-size})"}; 
+      #{$property}:clamp($min-size, $scaler, $max-size);
+    } @else if $min-size-left == 0 or $min-size-left == auto{
+      #{$property}:$max-size $min-size-left; 
+      #{$property}:#{"min(max(#{$min-size}, #{$scaler}), #{$max-size})"} $min-size-left;
+      #{$property}:clamp($min-size, $scaler, $max-size) $min-size-left;
+    } @else {
+      #{$property}:$max-size $min-size-left; 
+      #{$property}:#{"min(max(#{$min-size}, #{$scaler}), #{$max-size})"} #{"min(max(#{$min-size-left}, #{$scaler-left}), #{$max-size-left})"}; 
+      #{$property}:clamp($min-size, $scaler, $max-size) clamp($min-size-left, $scaler-left, $max-size-left);
+    }
+  }
+//   fade in css:

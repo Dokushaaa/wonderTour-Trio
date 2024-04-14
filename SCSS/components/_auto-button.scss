@@ -1,0 +1,41 @@
+@use '../abstract/' as *;
+.auto__buttons{
+    padding-top:2rem;
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+    @include mediaQuery{
+    padding-top:2rem;
+    display:flex;
+    flex-direction: row;
+    gap:2rem;
+    }
+    .autobtn1{
+        background-color: #01b3a7;
+        color:$clr-light;
+        padding:2rem;
+        border: 2px solid #01b3a7;
+        margin:unset;
+        width:17.5rem;
+        text-align: center;
+        &:hover{
+            background-color:transparent;
+            border-color:$clr-dark;
+            color:$clr-dark;
+        }
+    }
+    .autobtn2{
+        background-color: transparent;
+        color:$clr-dark;
+        padding:2rem;
+        border: 2px solid $clr-dark;
+        margin:unset;
+        width:17.5rem;
+        text-align: center;
+        &:hover{
+            background-color:#01b3a7;
+            border-color:#01b3a7;
+            color:$clr-light;
+        };
+    }
+}

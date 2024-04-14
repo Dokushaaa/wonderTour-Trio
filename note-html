@@ -1,0 +1,57 @@
+
+
+<!-- Hero Banner -->
+<section class="HeroBanner">
+  <div class="Hero__Wrapper">
+    <div class="HeroContentSlider item-1">
+      <div class="heroSlider cons">
+        <h3>Enjoy the best destinations with our travel agency</h3>
+        <h1>Explore <span>The World</span></h1>
+        <a href="">Get In Touch</a>
+      </div>
+    </div>
+    <div class="HeroContentSlider item-2">
+      <div class="heroSlider cons">
+        <h3>A Team of Professional Travel Experts</h3>
+        <h1>Trust <span>Our Experience</span></h1>
+        <a href="">Get In Touch</a>
+      </div>
+    </div>
+    <div class="HeroContentSlider item-3">
+      <div class="heroSlider cons">
+        <h3>Build your Next Holiday Trips With Us</h3>
+        <h1>Create <span>Your Tour</span></h1>
+        <a href="">Get In Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- section for travel categories -->
+<section class="travelCat">
+  <!-- no container -->
+    <div class="travelCat__wrapper">
+<div class="item__handler">
+        <!-- item 1 -->
+        <div class="travelItem item1">
+          <h2>Balloon Flights</h2>
+        </div>
+        <!-- item 2 -->
+        <div class="travelItem item2">
+   
+          <h2>Mountain Holiday</h2>
+        </div>
+        <!-- item 3 -->
+        <div class="travelItem item3">
+          <h2>Beach Holidays</h2>
+        </div>
+</div>
+    
+      <div class="otherTours">
+        <a href="">Other Tours<i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+ 
+    
+
+</section>

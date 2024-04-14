@@ -1,30 +1,30 @@
 :root{
     --light: #f5f5f5;
     --dark: #26252a;
-    --secondary: #303033;
-    --secondaryalt: #515156;
-    --accent: #f8565d;
-    --yellow: #efa83e
+
+    // util colors
+    --primary: #162e44;
+    --secondary: #01b3a7;
+    --accent: #50ba87;
+
 
 }
 
 //primary
-
 $clr-light: var(--light);
 $clr-dark: var(--dark);
+// util colors css to sass
+$clr-primary:var(--primary);
 $clr-secondary: var(--secondary);
-$clr-secondaryalt: var(--secondaryalt);
 $clr-accent: var(--accent);
-$clr-yellow: var(--yellow);
-// $clr-accent: #f16b4e;
-// $clr-primary: #232323;
-// $clr-secondary: #1f1f1f;
-//non-primary colors
 
-//non-screen sizes
-$sm: "42.5rem";
-$md: "92rem";
+
+
+//breakpoints
+$sm: "50rem";
+$md: "75.5rem";
+$laptop: "102.4rem";
+
 $lg: "144rem";
 $xl: "180rem";
-
 

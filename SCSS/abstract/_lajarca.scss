@@ -1,0 +1,100 @@
+@use 'colors' as *; 
+@use 'lajarcabreakpoints' as *; 
+
+
+
+// XL
+@mixin mediaQuery__xl($width:$l_xl) {
+    @media (min-width:$width) {
+        @content;
+    }
+}
+
+// XXL
+@mixin mediaQuery__xxl($width:$l_xxl) {
+    @media (min-width:$width) {
+        @content;
+    }
+}
+
+// LG
+@mixin mediaQuery__lg($width:$l_lg) {
+    @media (min-width:$width) {
+        @content;
+    }
+}
+
+// MD
+@mixin mediaQuery__md($width:$l_md) {
+    @media (min-width:$width) {
+        @content;
+    }
+}
+
+// SM
+@mixin mediaQuery__sm($width:$l_sm) {
+    @media (min-width:$width) {
+        @content;
+    }
+}
+
+// XXXL
+@mixin mediaQuery__xxxl($width:$l_xxxl) {
+    @media (min-width:$width) {
+        @content;
+    }
+}
+
+
+
+// own utility for desktop first
+// SM
+@mixin mediaQueryMax__sm($width:$l_sm) {
+    @media (max-width:$width) {
+        @content;
+    }
+}
+
+// XL
+@mixin mediaQueryMax__xl($width:$l_xl) {
+    @media (max-width:$width) {
+        @content;
+    }
+}
+
+// XXXL
+@mixin mediaQueryMax__xxxl($width:$l_xxxl) {
+    @media (max-width:$width) {
+        @content;
+    }
+}
+
+// XXL
+@mixin mediaQueryMax__xxl($width:$l_xxl) {
+    @media (max-width:$width) {
+        @content;
+    }
+}
+
+// LG
+@mixin mediaQueryMax__lg($width:$l_lg) {
+    @media (max-width:$width) {
+        @content;
+    }
+}
+
+// MD
+@mixin mediaQueryMax__md($width:$l_md) {
+    @media (max-width:$width) {
+        @content;
+    }
+}
+
+
+
+@mixin flex($justify:flex-start, $align: flex-start ) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+} 
+

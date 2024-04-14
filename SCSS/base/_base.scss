@@ -1,34 +1,33 @@
 //base for typographical sizes of the divs, sections, body. i.e. line-height, liding.
 @use '../abstract/' as *;
 @font-face{
-    font-family: "Clash-Display-Regular";
-    src: url('../../fonts/ClashDisplay-Regular.woff');
-}
-@font-face {
-    font-family: "Noto-Sans";
-    src: url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet');
+    font-family: "Font";
+    src: url('./../../dist/fonts/Montserrat-Medium.woff');
 }
 @font-face{
-    font-family: "Clash-Display-Medium";
-    src: url('../../fonts/ClashDisplay-Medium.woff');
+    font-family: "Font-Bold";
+    src: url('./../../dist/fonts/Montserrat-Bold.woff');
 }
 @font-face{
-    font-family: "Clash-Display-Bold";
-    src: url('../../fonts/ClashDisplay-Bold.woff');
+    font-family: "Font-Light";
+    src: url('./../../dist/fonts/Montserrat-Light.ttf');
 }
+
 
 
 body{
-    font-family:  "Clash-Display-Regular";
-    background-color: $clr-dark;
+    font-family:  "Font";
+    color:$clr-dark;
+    background-color: $clr-light;
     // background-color:red;
     color:rgba($clr-dark, 0.7);
     line-height: 1.6;
     font-size: 1.6rem;
     cursor: crosshair; 
 }
+
 .container{
-    max-width: 98rem;
+    max-width: 120rem;
     padding: 0 1.6rem;
     margin:0 auto;
 }
@@ -44,19 +43,24 @@ html{
 }
 a{
     text-decoration: none;
-    color: $clr-light;
+    color: $clr-dark;
 }
 p{
     font-size: clamp(1.4rem, 6vw,1.6rem);
     margin-bottom: 1.15rem;
     text-wrap: balance;
-    color: $clr-light;
+    color: $clr-dark;
 }
-h1,h2,h3,h4,h5,h6{
+h1{
     font-weight:bold ;
-    font-family: "Clash-Display-Bold";
+    font-family: "Font-Bold";
     text-wrap: balance;
-    color: $clr-light;
+    color: $clr-dark;
+}
+h2,h3,h4,h5,h6{
+    font-family: "Font";
+    text-wrap: balance;
+    color: $clr-dark;
 }
 h1{
     font-size: clamp(3.5rem, 6vw,5.5rem);
@@ -72,17 +76,18 @@ h3{
 }
 h4{
     font-size: clamp(1.4rem, 6vw,1.6rem);
-    margin-bottom: 1.6rem;
+    margin-bottom: unset;
+    // used to be 1.6rem
 }
 
 ul{
     text-transform: none;
     list-style: none;
     li{
-        color: $clr-light;
-        font-family: "Clash-Display-Medium";
+        color: $clr-dark;
+        font-family: "Font";
     i{
-        font-family: "Clash-Display-Regular";
+        font-family: "Font";
     }
 }
 }
@@ -95,17 +100,19 @@ img{
     }
 }
 button{
-    color: $clr-light;
+    color: $clr-dark;
 }
 label, input ,textarea, i{
     color:$clr-dark;
-    font-family:"Clash-Display-Regular" ;
+    font-family:"Font" ;
 }
 small{
-    color: $clr-light;
+    color: $clr-dark;
 }
 i{
-    color:$clr-light;
+    color:$clr-dark;
 }
-
+button, a, i , ul, li{
+    border:none;
+}
     
