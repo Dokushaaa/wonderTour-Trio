@@ -689,15 +689,17 @@
         });
     });
 
+    
 
 document.addEventListener('DOMContentLoaded', function() {
   const parallaxMaterial = document.querySelector('.parallax__material img');
   let initialTranslateY = 0; // Initial translateY value
   let lastScrollPosition = 0; // Variable to store the last scroll position
-  
+ 
   window.addEventListener('scroll', function() {
     let scrollPosition = window.scrollY;
     let scrollDirection = scrollPosition > lastScrollPosition ? 'down' : 'up'; // Determine scroll direction
+
 
     // Adjust translateY based on scroll direction
     if (scrollDirection === 'down') {
@@ -705,6 +707,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       initialTranslateY = Math.max(0, initialTranslateY - 1); // Decrement translateY when scrolling up, but keep it >= 0
     }
+
 
     parallaxMaterial.style.transform = `translate3d(-50%, ${initialTranslateY}px, 0)`;
     lastScrollPosition = scrollPosition; // Update last scroll position
