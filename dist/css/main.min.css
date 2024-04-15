@@ -5761,28 +5761,11 @@ p {
   right: -1px;
   bottom: 0;
   box-sizing: border-box;
-}
-.parallax__material img {
-  display: block;
-  transform: translate3d(-50%, 83px, 0px);
-  overflow-y: scroll;
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  min-width: 101%;
-  max-width: none;
-  min-height: 101%;
-  height: auto;
-  vertical-align: middle;
-  box-sizing: border-box;
-  overflow-clip-margin: content-box;
-  overflow: clip;
-}
-@media (min-width: 1200px) {
-  .parallax__material img {
-    display: block;
-    transform: translate3d(-50%, 145px, 0px);
-  }
+  background-image: url(/images/bg-counter-2.jpg);
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .parallax__content {
   position: relative;

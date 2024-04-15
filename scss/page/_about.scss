@@ -1427,6 +1427,12 @@
         box-sizing: border-box;
     }
 
+    // background-image: url(/images/bg-counter-2.jpg);
+    // background-attachment: fixed;
+    // background-position: center center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+
     &__material {
         position: absolute;
         top: 0;
@@ -1435,30 +1441,13 @@
         bottom: 0;
         box-sizing: border-box;
 
-        img {
-            @include mediaQuery__xl {
-                display: block;
-                transform: translate3d(-50%, 145px, 0px);
-            }
-            display: block;
-            transform: translate3d(-50%, 83px, 0px);
+        background-image: url(/images/bg-counter-2.jpg);
+        background-attachment: fixed;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
-            overflow-y: scroll;
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            min-width: 101%;
-            max-width: none;
-            min-height: 101%;
 
-            height: auto;
-            vertical-align: middle;
-
-            box-sizing: border-box;
-
-            overflow-clip-margin: content-box;
-            overflow: clip;
-        }
     }
 
     &__content {
