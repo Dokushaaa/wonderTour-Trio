@@ -8,18 +8,19 @@
     font-family: "fontawesome-webfont";
     src: url('../../fonts/fontawesome-webfont.woff2');
 }
-@font-face{
-    font-family: "JTUSjIg1_i6t8kCHKm459Wlhyw";
-    src: url('../../fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2');
+@font-face {
+    font-family: "montserrat-regular";
+    src: url('../../fonts/Montserrat-Regular.woff2');
 }
-@font-face{
-    font-family: "fonts/MaterialIcons-Regular";
-    src: url('../../fonts/fonts/MaterialIcons-Regular.woff2');
+
+@font-face {
+    font-family: "montserrat-bold";
+    src: url('../../fonts/Montserrat-Bold.woff2');
 }
 
 
 body{
-    font-family:  "JTUSjIg1_i6t8kCHKm459Wlhyw";
+    font-family:  "montserrat-regular";
     background-color: $clr-light;
     // background-color:red;
     color:rgba($clr-dark, 0.7);
@@ -30,7 +31,7 @@ body{
    
    
 }
-.container{
+.container1{
     padding: 0 1.6rem;
     margin:0 auto;
     @include mediaQuery__xl{
@@ -44,7 +45,7 @@ body.open{
 }
 html{
     font-size: 10px; 
-    // overflow: hidden;
+   scroll-behavior: smooth;
    
     
 }
@@ -59,7 +60,7 @@ p{
     color: $clr-light;
 }
 h1,h2,h3,h4,h5,h6{
-    font-family: "JTUSjIg1_i6t8kCHKm459Wlhyw";
+    font-family: "montserrat-regular";
     text-wrap: balance;
     color: $clr-light;
 }
@@ -79,18 +80,16 @@ h4{
     font-size: clamp(1.4rem, 6vw,1.6rem);
     margin-bottom: 1.6rem;
 }
-h5:hover{
-    color: $clr-accent;
-}
+
 
 ul{
     text-transform: none;
     list-style: none;
     li{
         color: $clr-light;
-        font-family: "JTUSjIg1_i6t8kCHKm459Wlhyw";
+        font-family: "montserrat-regular";
     i{
-        font-family: "JTUSjIg1_i6t8kCHKm459Wlhyw";
+        font-family: "montserrat-regular";
     }
 }
 }
@@ -98,10 +97,7 @@ ul{
 button{
     color: $clr-light;
 }
-label, input ,textarea, i{
-    color:$clr-dark;
-    font-family:"JTUSjIg1_i6t8kCHKm459Wlhyw" ;
-}
+
 small{
     color: $clr-light;
 }

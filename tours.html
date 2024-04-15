@@ -12,10 +12,14 @@
     <title>Our Tours</title>
 </head>
 <body>
+
+    
+
+
     <!-- Breadcrumbs -->
     <section class="breadcrumbs">
         <div class="breadcrumbs__wrapper">
-            <div class="container">
+            <div class="container1">
                 <h2>Our Tours</h2>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -531,15 +535,15 @@
     </section>
 
     <!-- SUB FOOTER HERE -->
-    <section class="links bg-blue py-5">
-        <div class="container">
+    <section class="links bg-blue">
+        <div class="container1">
             <div class="links__wrapper">
                 <div class="sub-footer-content gap-3 grid">
                 <div class="links__item fadeInRight">
                     <h4>CONTACT US</h4>
                     <div class="links__details">
                     <ul class=" gap-2 grid">
-                        <li class="gap-2 flex"> <span class="icon fa fa-phone"></span><a  href="tel:#">+1 323-913-4688</a></li>
+                        <li class="gap-2 flex"> <span class="icon fa fa-phone"></span><a href="tel:#">+1 323-913-4688</a></li>
                         <li class="gap-2 flex"><span class="icon fa fa-envelope"></span><a href="mailto:#">info@demolink.org</a></li>
                         <li class="gap-2 flex"><span class="icon fa fa-location-arrow"></span><a href="#">4730 Crystal Springs Dr, Los Angeles, CA 90027</a></li>
                       </ul>
@@ -556,7 +560,8 @@
                                 <li><a href=""><h5>Top 10 Hotels: Rating by Wonder Tour Travel Experts</h5></a></li>
                                 <li><p>May 04, 2022</p></li>
                             </ul>
-
+    
+    
                         </div>
                 </div>
                 <div class="links__item fadeInLeft ">
@@ -569,21 +574,23 @@
                                 <li><a href="">Gallery</a></li>
                                 <li><a href="">Blog</a></li>
                             </ul>
-                            <button class="btn btn1">Get in touch</button>
+                            <button class="btn">Get in touch</button>
                         </div>
                 </div>
-
+    
+    
             </div>
-                
-                
-                
+               
             </div>
         </div>
     </section>
-   
+    
+    
+    
+    
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
+        <div class="container1">
             <div class="footer_wrapper ">
                 <ul>
                     <li><i class="fa-brands fa-facebook social_icons"></i></li>
@@ -601,6 +608,9 @@
         </div>
     </footer>
 
+    <a class="back-top sticky" href="#top">
+        <i class="fa-solid fa-angle-up"></i>
+    </a>
 
 <script> 
 const tourNav = document.querySelectorAll(".tours__nav__link");
@@ -684,11 +694,20 @@ function removeActiveContent() {
 });
 </script>
 
+<script>
+    window.addEventListener('scroll', function() {
+  var uiTop = document.querySelector('.back-top');
 
-
-
-
-
-
+  if (window.scrollY > 0) {
+      uiTop.classList.remove(".back-top");
+      uiTop.classList.add("sticky");
+  } else {
+      uiTop.classList.add(".back-top");
+      uiTop.classList.remove("sticky");
+      
+  }
+  
+});
+</script>
 </body>
 </html>

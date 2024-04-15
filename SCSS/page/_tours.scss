@@ -218,17 +218,27 @@
     }
     &__tab{
         transition: opacity 0.15s linear;
+        @include mediaQuery__xxl{
+            padding: 8rem 35rem;
+        }
         @include mediaQuery__xl{
-            padding: 8rem 30rem;
+            padding: 8rem 35rem;
+        }
+        @include mediaQuery__lg{
+            padding: 8rem 35rem;
+        }
+        @include mediaQuery__md{
+            padding: 8rem 35rem;
         }
         padding: 3rem .8rem;
         gap: 1rem;
         justify-content: center;
-        // position: absolute;
-        // opacity: 0;
-        // display: grid;
         gap: 4rem;
         display:none;
+        
+    }
+    &__tab.active{
+        display:grid;
         
     }
     &__item{
@@ -247,9 +257,7 @@
         @include mediaQuery__md{
             box-shadow:0 0 2px 0 rgba(0, 0, 0, 0.17);
             display: flex;
-           
-            
-            
+
         }
         @include mediaQuery__xxl{
             box-shadow:0 0 2px 0 rgba(0, 0, 0, 0.17);
@@ -265,20 +273,20 @@
             position: relative;
             display: block;       
             object-fit: cover;
-            width: 100%;
-            // max-width: 800px;
+            max-width: 600px;
             @include mediaQuery__md{
-                width: 200rem;
-                height: 34rem;    
+                width: 220rem;   
             } 
                 @include mediaQuery__lg{
-                    width: 140rem;
-                    height: 33rem;    
+                    width: 190rem; 
                 } 
                 @include mediaQuery__xl{
-                    width: 100rem;
-                    height: 35rem;    
+                    width: 190rem;
                 } 
+                @include mediaQuery__xxl{
+                    width: 190rem;
+                } 
+          
 
            
 
@@ -286,11 +294,14 @@
             img{
                 transform: scale(1.1);
                 cursor: pointer;
+                width: auto;
+                height: 100%;
+                position: relative;
                 &:hover {
-                    transform: scale(.99);
+                    transform: none;
                     transition: .4s ease-in-out all;
                 }
-
+                
             }
 
             
@@ -301,6 +312,7 @@
                 @include mediaQuery__md{
                     display: none;
                 }
+              
                 position: absolute;
                 overflow: hidden;
                 text-align: center;
@@ -393,6 +405,7 @@
                 font-weight: 400;
                 &:hover{
                     border-color: transparent;
+                    
                 }
 
             }
@@ -495,34 +508,10 @@ ul li i{
     
 }
 }
-// &__destination{
-//     position: relative;
-//     @media screen and (min-width: 533px){
-//         height: 270vh; 
-//     }
-//     @include mediaQuery__md{
-//         height: 170vh;
-//     }
-//     @include mediaQuery__lg{
-//         height: 160vh;
-//     }
-//     @include mediaQuery__xl{
-//         height: 180vh;
-//     }
-//     @include mediaQuery__xxl{
-//         height: 170vh;
-//     }
-//     position: relative;
-//     height: 220vh;
-// }
 
 
-&__tab.active{
-    // opacity: 100%;
-    // z-index: 999;
-    display:grid;
-    
-}
+
+
 
 
 

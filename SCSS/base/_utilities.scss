@@ -1,37 +1,22 @@
 //for permanent elements
 @use '../abstract/' as *;
 
-// banner images utils: test run
-$food--banner: url('../../img/OF/Food_banner\ sm.jpg') ;
 
-$banners:(
-   
-    "food":$food--banner
-);
-@each $key, $val in $banners{
-    .banner--#{$key}{
-        background-image: #{$val};
-        @include mediaQuery{
-            background-image: url('../../img/OF/Food_banner\ lm.jpg');
-        }
-    }
-}
-$width:("full":100%, "half":50%, "one-fourth":25%, "one-third":33.33333%);
-@each $key, $val in $width{
-    .w-#{$key}{
-        width:#{$val};
-    }
-}
 
 
 //color classes array
-$colors:(
-    light: #f5f5f5,
-    dark: #26252a,
-    yellow: #efa83e,
-    blue: #162e44,
-
+$colors: (
+    "primary" : $clr-primary,
+    "accent" : $clr-accent,
+    "light" : $clr-light,
+    "dark" : $clr-dark,
+    "gray" : $clr-gray,
+    "dark-accent" : $clr-dark-accent,
+    "blue" : $clr-dark-blue,
+    "star" : $clr-star,
+    "grey" : $clr-grey,
 );
+
 //color classes assigner ex: class="container bg-yellow"
 @each $key, $val in $colors{
     .bg-#{$key}{
