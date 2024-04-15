@@ -1,10 +1,47 @@
 @use 'colors' as *; 
 
+// SAAVEDRA
 @mixin imgCover($ht:1px, $wd:100%){
     height: $ht;
-    width:  $wd;
+    width: $wd;
     object-fit: cover;
+    filter: brightness(50%);
+
 }
+
+@mixin centerImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    
+    height: auto;
+}
+@mixin centerImgFaceright{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+@mixin centerImgReset{
+    display: unset;
+    margin-left: auto;
+    margin-right: auto;
+    width: unset;
+}
+@mixin imgCoverB($ht:1px, $wd:1px){
+    height: $ht;
+    width: $wd;
+    object-fit: cover;
+    filter: brightness(100%);
+
+}
+@mixin roundedContainer($clr: $clr-light){
+    max-width:180rem;
+    padding:0 1.6rem;
+    margin: 2rem auto;
+}
+
 
 // XL
 @mixin mediaQuery__xl($width:$xl) {
