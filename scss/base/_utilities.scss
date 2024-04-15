@@ -8,6 +8,8 @@ $colors: (
     "gray" : $clr-gray,
     "dark-accent" : $clr-dark-accent,
     "blue" : $clr-dark-blue,
+    "star" : $clr-star,
+    "grey" : $clr-grey,
 );
 
 @each $key, $val in $colors {
