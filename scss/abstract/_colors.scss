@@ -9,6 +9,14 @@
 
 }
 
+//primary
+$clr-light: var(--light);
+$clr-dark: var(--dark);
+// util colors css to sass
+$clr-primary:var(--primary);
+$clr-secondary: var(--secondary);
+$clr-accent: var(--accent);
+
 
 $clr-primary: #fff;
 $clr-accent: #01b3a7;
@@ -27,6 +35,16 @@ $lg: "992px";
 $xl: "1200px";
 $xxl: "1600px";
 $xxxl: "1669px";
+
+
+// saavedra breakpoints 
+//breakpoints
+$sm_saavedra: "50rem";
+$md_saavedra: "75.5rem";
+$laptop_saavedra: "102.4rem";
+
+$lg_saavedra: "144rem";
+$xl_saavedra: "180rem";
 
 
 

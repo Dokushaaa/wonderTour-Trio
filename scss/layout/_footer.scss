@@ -84,7 +84,10 @@
 }
 
 .links {
-    padding: 50px 0;
+    padding-top: 70px;
+    padding-bottom: 75px;
+    padding-left: 0;
+    padding-right: 0;
     color: $clr-light;
 
     .container {
@@ -106,6 +109,11 @@
 /*SUB FOOTER */
 
 .sub-footer-content{
+
+    a {
+       color: #ffffff; 
+    }
+    
     .container {
         
         @media (min-width: 1200px){
@@ -151,6 +159,8 @@
         h4{
          text-align: center;  
           font-weight: 500;
+          color: #ffffff;
+          margin-bottom: 2rem;
           @include mediaQuery__lg{
             text-align: left;
     }
@@ -184,7 +194,9 @@
         
         }
         ul li {
-             
+            font-family: "Montserrat", sans-serif, Arial, sans-serif;
+            margin-right: 10px;
+            margin-bottom: 6px;
             h5{
               color: $clr-accent;
               font-weight: 350;
@@ -205,31 +217,45 @@
             }
             a {
                 transition: all 0.3s ease-in-out;
+                font-size: 14px;
+                line-height: 1.72;
+                
             }
 
 
             a:hover {
                 color: #01b3a7;
             }
+
+            span::before {
+                font-size: 20px;
+                line-height: 24px;
+            }
            
         }
         .link { 
 
-
             justify-content: center;
             @include mediaQuery__lg{
                 display: grid;
-                grid-template-columns: 1fr 1fr ;
-                gap: 0; 
+                grid-template-columns: 1fr 1fr;
+                gap: 0;
             }
             padding: 0;
             display: flex; 
             flex-wrap: wrap;
             gap: 2rem;
             
+            li {
+                white-space: nowrap;
+            }
+
             li a{
                font-size: 1.2rem;
+               font-family: "Montserrat", sans-serif, Arial, sans-serif;
                display: inline-block;
+
+               font-size: 14px;
                 &:hover{
                     color: $clr-accent;
                 }
@@ -246,6 +272,7 @@
                 left: 0;
                 content: '';
                 border-radius: 50%;
+                
     
                 
             }
@@ -331,6 +358,9 @@
     padding: 2.5rem;
     background-color: #11263a;
 
+    p {
+        color: #ffffff;
+    }
     .container {
         padding: 0 1.6rem;
         margin:0 auto;
@@ -397,6 +427,9 @@
                 color:#01b3a7;
                 opacity: 100%;
             }
+
+            color: #e1e1e1;
+            font-size: 16px;
            
         }
 

@@ -21,8 +21,8 @@ html {
 
 body {
     font-family: "Montserrat", sans-serif, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.71429;
+    line-height: 1.6;
+    font-size: 1.6rem;
     font-weight: 400;
     letter-spacing: normal;
     color: #151515;
@@ -40,7 +40,7 @@ body.open {
 
 a {
     text-decoration: none;
-    color: $clr-light;
+    color: $clr-dark;
 }
 
 ul {
@@ -52,37 +52,48 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: bold;
     font-family: "montserrat-regular";
     text-wrap: balance;
-    color: $clr-light;
+    color: $clr-dark;
 }
 
 h1 {
-    font-size: clamp(3.5rem, 6vw , 5.5rem);
-    margin-bottom: 2rem;
+    font-weight:bold ;
+    font-family: "Font-Bold";
+    text-wrap: balance;
+    color: $clr-dark;
 }
 
 h2 {
-    font-size: clamp(2.2rem, 6vw , 3rem);
+    // font-size: clamp(2.2rem, 6vw , 3rem);
+    // margin-bottom: 2rem;
+
+    font-size: clamp(2rem, 6vw,3rem);
     margin-bottom: 2rem;
 }
 
 h3 {
-    display: block;
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: 600;
-    font-family: "Montserrat", sans-serif, Arial, sans-serif;
-    letter-spacing: normal;
-    color: #151515;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
+    // display: block;
+    // margin-top: 0;
+    // margin-bottom: 0;
+    // font-weight: 600;
+    // font-family: "Montserrat", sans-serif, Arial, sans-serif;
+    // letter-spacing: normal;
+    // color: #151515;
+    // margin-block-start: 1em;
+    // margin-block-end: 1em;
+    // margin-inline-start: 0px;
+    // margin-inline-end: 0px;
+    // unicode-bidi: isolate;
+
+    font-size: clamp(2rem, 6vw,2.5rem);
+    margin-bottom: 1.6rem;
 }
 
 h4 {
-    font-size: clamp(1.4rem, 6vw , 1.6rem);
-    margin-bottom: 1.6rem;
+    // font-size: clamp(1.4rem, 6vw , 1.6rem);
+    // margin-bottom: 1.6rem;
+
+    font-size: clamp(1.4rem, 6vw,1.6rem);
+    margin-bottom: unset;
 }
 
 h5 {
@@ -99,12 +110,69 @@ h5 {
     margin-bottom: 0;
 }
 
+
 p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-    margin: 0;
+    // display: block;
+    // margin-block-start: 1em;
+    // margin-block-end: 1em;
+    // margin-inline-start: 0px;
+    // margin-inline-end: 0px;
+    // unicode-bidi: isolate;
+    // margin: 0;
+
+    font-size: clamp(1.4rem, 6vw,1.6rem);
+    margin-bottom: 1.15rem;
+    text-wrap: balance;
+    color: $clr-dark;
+}
+
+// SAAVEDRA
+
+.container{
+    max-width: 120rem;
+    padding: 0 1.6rem;
+    margin:0 auto;
+}
+
+ul{
+    text-transform: none;
+    list-style: none;
+    li{
+        color: $clr-dark;
+        font-family: "Font";
+    i{
+        font-family: "Font";
+    }
+}
+}
+
+
+img{
+    filter: brightness(100%);
+    &:hover{
+        filter: brightness(90%);
+        transform: scale(1.025); 
+       
+    }
+}
+
+button{
+    color: $clr-dark;
+}
+
+label, input ,textarea, i{
+    color:$clr-dark;
+    font-family:"Font" ;
+}
+
+small{
+    color: $clr-dark;
+}
+
+i{
+    color:$clr-dark;
+}
+
+button, a, i , ul, li{
+    border:none;
 }

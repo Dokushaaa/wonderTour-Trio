@@ -23,10 +23,11 @@ $colors: (
 }
 
 
+// alignment
 $alignments: left, center, right, justify;
-@each $alignment in $alignments {
-    .text-#{$alignment} {
-       text-align: #{$alignment};
+@each $alignment in $alignments{
+    .text-#{$alignment}{
+        text-align: #{$alignment}
     }
 }
 
@@ -79,11 +80,17 @@ $align:(
     "end":flex-end
 );
 
+@each $key,  $val in $justify{
+    .justify-#{$key}{
+        justify-content: #{$val};
+    }
+}
 @each $key,  $val in $align{
     .justify-#{$key}{
         justify-content:#{$val};
     }
 }
+
 
 //number loops (ex margin bottom) class="container my-69 px-31"
 @for $i from 1 through 100{
@@ -127,3 +134,4 @@ $width:("full":100%, "half":50%, "one-fourth":25%, "one-third":33.33333%);
         width:#{$val};
     }
 }
+
