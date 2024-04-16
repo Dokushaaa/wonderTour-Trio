@@ -4851,6 +4851,7 @@ button, a, i, ul, li {
   .chooseUs__details {
     flex: 0 0 auto;
     width: 83.33333%;
+    height: 410px;
   }
 }
 .chooseUs__details h1 {
@@ -5082,12 +5083,18 @@ button, a, i, ul, li {
 }
 .chooseUs__progress__header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   box-sizing: border-box;
 }
 .chooseUs__progress__header p {
   margin: 0;
+  text-align: left;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0.075em;
+  font-family: "Montserrat", sans-serif, Arial, sans-serif;
+  color: #9b9b9b;
 }
 .chooseUs__progress__bar {
   margin-top: 12px;
@@ -5738,6 +5745,7 @@ button, a, i, ul, li {
   margin-right: auto;
   box-sizing: border-box;
   display: block;
+  height: 270px;
 }
 .testimonials__quote__profile {
   color: #01b3a7;
